@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # thoth - https://en.wikipedia.org/wiki/Thoth
-# dictionary from the command line
+# helpful English diction tools from the command line
 
-set -o errexit
 self="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
-words=pg29765.txt
-# if [[ -f words.txt ]] ; then words="${self}/words.txt" ; fi
-# if [[ -f /usr/local/etc/words.txt ]] ; then words=/usr/local/etc/words.txt ; fi
+version=0.0.0
+description="Helpful English diction tools from the command line"
+if [[ -f words.txt ]] ; then words="${self}/words.txt" ; fi
+if [[ -f /usr/local/etc/words.txt ]] ; then words=/usr/local/etc/words.txt ; fi
 
 function define {
 	if [[ "$1" == "-h" || "$1" == "--help" ]] ; then
@@ -27,11 +27,13 @@ function define {
 		return 1
 	fi
 
-	echo "Using: $words"
-
 	for term in "$@" ; do
 		word="$(echo "$term" | tr a-z A-Z)"
 		locations=( "$(grep "^$word$" -n "$words")" )
+		if [[ $? -ne 0 ]] ; then
+			>&2 echo "thoth: no dictionary entry for '$term'"
+			return 1
+		fi
 		for location in ${locations[@]} ; do
 			line_number="${location%%:*}"
 			seen=0
@@ -91,13 +93,30 @@ function list {
 	declare -F | awk '{print $NF}'
 }
 
+function info {
+	if [[ "$1" == "-h" || "$1" == "--help" ]] ; then
+		echo -e ">> thoth info\nPrint info about thoth" | fold -w 100 -s
+		return
+	fi
+	cat << EndOfInfo
+Name:        thoth
+Description: $description
+Author:      Will Carhart
+Version:     v$version
+
+script file:     ${self}/thoth
+dictionary file: $words
+synonym file:    TODO
+EndOfInfo
+}
+
 function help {
 	if [[ "$1" == "-h" || "$1" == "--help" ]] ; then
 		echo -e ">> thoth help\nShow this menu and exit" | fold -w 100 -s
 		return
 	fi
 	cat << EndOfHelp
-DESCRIPTION TODO
+$description
 
 Usage:
   thoth COMMAND

@@ -1,0 +1,113 @@
+#!/bin/bash
+
+# thoth - https://en.wikipedia.org/wiki/Thoth
+# dictionary from the command line
+
+set -o errexit
+self="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+words=
+if [[ -f words.txt ]] ; then words="${self}/words.txt" ; fi
+if [[ -f /usr/local/etc/words.txt ]] ; then words=/usr/local/etc/words.txt ; fi
+
+function define {
+	if [[ "$1" == "-h" || "$1" == "--help" ]] ; then
+		echo -e ">> thoth define WORD\nDefine the word WORD" | fold -w 100 -s
+		return
+	fi
+
+	if [[ "$words" == "" ]] ; then
+		>&2 echo "thoth: err: could not find dictionary file"
+		>&2 echo "  Use \`install.sh\` to install the dictionary file globally, or"
+		>&2 echo "  run thoth.sh with the words.txt file in the same directory."
+		return 1
+	fi
+
+	if [[ $# -eq 0 ]] ; then
+		>&2 echo "thoth: what word do you want to define?"
+		return 1
+	fi
+
+	for term in "$@" ; do
+		word="$(echo "$term" | tr a-z A-Z)"
+		locations=( "$(grep "^$word\r" -n "$words")" )
+		for location in "${locations[@]}" ; do
+			loc="${location%%:*}"
+			seen=0
+
+			while IFS= read -r line ; do
+				if [[ "$line" == "" ]] ; then
+					echo
+					continue
+				fi
+				if [[ "$line" != "$(echo "$line" | tr a-z A-Z)" ]] ; then
+					let seen+=1
+					if [[ $seen -gt 1 ]] ; then break ; fi
+				fi
+				echo "$line"
+			done < <(tail -n "+$loc" "$words")
+
+			# while read line ; do
+			# 	if [[ $count -lt $loc ]] ; then
+			# 		echo "$count"
+			# 		count=$(( $count + 1 ))
+			# 		continue
+			# 	fi
+			# 	echo "${count}: $line"
+			# 	break
+			# done <"$words"
+			# {
+			# 	for ((i=$loc;i--;)) ; do
+			# 		read
+			# 	done
+			# 	while read line ; do
+			# 		echo $line
+			# 		break
+			# 	done
+			# } < "$words"
+			# while read line ; do
+			# 	if [[ "$line" == "[A-Z]" ]] ; then
+			# 		echo
+			# 	fi
+			# done <"$words"
+		done
+	done
+}
+
+function list {
+	if [[ "$1" == "-h" || "$1" == "--help" ]] ; then
+		echo -e ">> thoth list\nList all available commands" | fold -w 100 -s
+		return
+	fi
+	declare -F | awk '{print $NF}'
+}
+
+function help {
+	if [[ "$1" == "-h" || "$1" == "--help" ]] ; then
+		echo -e ">> thoth help\nShow this menu and exit" | fold -w 100 -s
+		return
+	fi
+	cat << EndOfHelp
+DESCRIPTION TODO
+
+Usage:
+  thoth COMMAND
+
+Available commands:
+$(declare -F | awk '{print $NF}' | sed "s/^/  /")
+
+$( \
+	for cmd in $(declare -F | awk '{print $NF}') ; do \
+		echo "$($self/thoth $cmd --help)" && \
+		echo ; \
+	done \
+)
+EndOfHelp
+}
+
+if declare -F -- "${1:-}" >/dev/null ; then
+	"$@"
+else
+	>&2 echo "thoth: err: no such command '$1'"
+	>&2 echo "Use 'help' for available commands"
+	exit 1
+fi

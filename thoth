@@ -51,11 +51,21 @@ function define {
 
 function shell {
 	if [[ "$1" == "-h" || "$1" == "--help" ]] ; then
-		__helptext ">> thoth shell\n[NOT IMPLEMENTED] Open a new thoth shell to interpret thoth commands"
+		__helptext ">> thoth shell\nOpen a new thoth shell to interpret thoth commands"
 		return
 	fi
-	echo "thoth: err: not implemented yet"
-	return 1
+
+	prompt=">> "
+	while : ; do
+		echo -n "$prompt"
+		IFS= read key
+		if [[ "$key" == "exit"* || "$key" == "quit"* ]] ; then return ; fi
+		if [[ `__listfunctions` != *`echo "$key" | cut -d ' ' -f 1`* ]] ; then
+			__errortext "Unknown command '`echo $key | cut -d ' ' -f 1`'"
+			continue
+		fi
+		$key
+	done
 }
 
 function synonym {

@@ -75,7 +75,7 @@ function synonym {
 		__helptext ">> thoth synonym WORD\n[NOT IMPLEMENTED] Find synonyms for word WORD"
 		return
 	fi
-	echo "thoth: err: not implemented yet"
+	__errortext "thoth: err: not implemented yet"
 	return 1
 }
 
@@ -85,7 +85,7 @@ function antonym {
 		__helptext ">> thoth antonym WORD\n[NOT IMPLEMENTED] Find antonyms for word WORD"
 		return
 	fi
-	echo "thoth: err: not implemented yet"
+	__errortext "thoth: err: not implemented yet"
 	return 1
 }
 
@@ -95,7 +95,7 @@ function example {
 		__helptext ">> thoth example WORD\n[NOT IMPLEMENTED] Find examples for word WORD"
 		return
 	fi
-	echo "thoth: err: not implemented yet"
+	__errortext "thoth: err: not implemented yet"
 	return 1
 }
 
@@ -113,6 +113,15 @@ function version {
 		return
 	fi
 	echo "$version"
+}
+
+function add {
+	if [[ "$1" == "-h" || "$1" == "--help" ]] ; then
+		__helptext ">> thoth add\n[NOT IMPLEMENTED] Add a new word to the dictionary"
+		return
+	fi
+	__errortext "thoth: err: not implemented yet"
+	return 1
 }
 
 function info {

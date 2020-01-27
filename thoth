@@ -9,6 +9,7 @@ description="Helpful English diction tools for the command line"
 if [[ -f words.txt ]] ; then words="${self}/words.txt" ; fi
 if [[ -f /usr/local/etc/words.txt ]] ; then words=/usr/local/etc/words.txt ; fi
 
+# TODO: update with new architecture
 function define {
 	if [[ "$1" == "-h" || "$1" == "--help" ]] ; then
 		__helptext ">> thoth define WORD\nDefine the word WORD"
@@ -68,6 +69,7 @@ function shell {
 	done
 }
 
+# TODO: implement
 function synonym {
 	if [[ "$1" == "-h" || "$1" == "--help" ]] ; then
 		__helptext ">> thoth synonym WORD\n[NOT IMPLEMENTED] Find synonyms for word WORD"
@@ -77,6 +79,7 @@ function synonym {
 	return 1
 }
 
+# TODO: implement
 function antonym {
 	if [[ "$1" == "-h" || "$1" == "--help" ]] ; then
 		__helptext ">> thoth antonym WORD\n[NOT IMPLEMENTED] Find antonyms for word WORD"
@@ -86,6 +89,7 @@ function antonym {
 	return 1
 }
 
+# TODO: implement
 function example {
 	if [[ "$1" == "-h" || "$1" == "--help" ]] ; then
 		__helptext ">> thoth example WORD\n[NOT IMPLEMENTED] Find examples for word WORD"

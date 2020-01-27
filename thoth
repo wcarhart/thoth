@@ -1,29 +1,29 @@
 #!/bin/bash
 
 # thoth - https://en.wikipedia.org/wiki/Thoth
-# helpful English diction tools from the command line
+# helpful English diction tools for the command line
 
 self="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 version=0.0.0
-description="Helpful English diction tools from the command line"
+description="Helpful English diction tools for the command line"
 if [[ -f words.txt ]] ; then words="${self}/words.txt" ; fi
 if [[ -f /usr/local/etc/words.txt ]] ; then words=/usr/local/etc/words.txt ; fi
 
 function define {
 	if [[ "$1" == "-h" || "$1" == "--help" ]] ; then
-		echo -e ">> thoth define WORD\nDefine the word WORD" | fold -w 100 -s
+		__helptext ">> thoth define WORD\nDefine the word WORD"
 		return
 	fi
 
 	if [[ "$words" == "" ]] ; then
-		>&2 echo "thoth: err: could not find dictionary file"
-		>&2 echo "  Use \`install.sh\` to install the dictionary file globally, or"
-		>&2 echo "  run thoth.sh with the words.txt file in the same directory."
+		__errortext "thoth: err: could not find dictionary file"
+		__errortext "  Use \`install.sh\` to install the dictionary file globally, or"
+		__errortext "  run thoth.sh with the words.txt file in the same directory."
 		return 1
 	fi
 
 	if [[ $# -eq 0 ]] ; then
-		>&2 echo "thoth: what word do you want to define?"
+		__errortext "thoth: what word do you want to define?"
 		return 1
 	fi
 
@@ -31,7 +31,7 @@ function define {
 		word="$(echo "$term" | tr a-z A-Z)"
 		locations=( "$(grep "^$word$" -n "$words")" )
 		if [[ $? -ne 0 ]] ; then
-			>&2 echo "thoth: no dictionary entry for '$term'"
+			__errortext "thoth: no dictionary entry for '$term'"
 			return 1
 		fi
 		for location in ${locations[@]} ; do
@@ -51,7 +51,7 @@ function define {
 
 function shell {
 	if [[ "$1" == "-h" || "$1" == "--help" ]] ; then
-		echo -e ">> thoth shell\n[NOT IMPLEMENTED] Open a new thoth shell to interpret thoth commands" | fold -w 100 -s
+		__helptext ">> thoth shell\n[NOT IMPLEMENTED] Open a new thoth shell to interpret thoth commands"
 		return
 	fi
 	echo "thoth: err: not implemented yet"
@@ -60,7 +60,7 @@ function shell {
 
 function synonym {
 	if [[ "$1" == "-h" || "$1" == "--help" ]] ; then
-		echo -e ">> thoth synonym WORD\n[NOT IMPLEMENTED] Find synonyms for word WORD" | fold -w 100 -s
+		__helptext ">> thoth synonym WORD\n[NOT IMPLEMENTED] Find synonyms for word WORD"
 		return
 	fi
 	echo "thoth: err: not implemented yet"
@@ -69,7 +69,7 @@ function synonym {
 
 function antonym {
 	if [[ "$1" == "-h" || "$1" == "--help" ]] ; then
-		echo -e ">> thoth antonym WORD\n[NOT IMPLEMENTED] Find antonyms for word WORD" | fold -w 100 -s
+		__helptext ">> thoth antonym WORD\n[NOT IMPLEMENTED] Find antonyms for word WORD"
 		return
 	fi
 	echo "thoth: err: not implemented yet"
@@ -78,7 +78,7 @@ function antonym {
 
 function example {
 	if [[ "$1" == "-h" || "$1" == "--help" ]] ; then
-		echo -e ">> thoth example WORD\n[NOT IMPLEMENTED] Find examples for word WORD" | fold -w 100 -s
+		__helptext ">> thoth example WORD\n[NOT IMPLEMENTED] Find examples for word WORD"
 		return
 	fi
 	echo "thoth: err: not implemented yet"
@@ -87,15 +87,23 @@ function example {
 
 function list {
 	if [[ "$1" == "-h" || "$1" == "--help" ]] ; then
-		echo -e ">> thoth list\nList all available commands" | fold -w 100 -s
+		__helptext ">> thoth list\nList all available commands"
 		return
 	fi
 	declare -F | awk '{print $NF}'
 }
 
+function version {
+	if [[ "$1" == "-h" || "$1" == "--help" ]] ; then
+		__helptext ">> thoth version\nPrint thoth version"
+		return
+	fi
+	echo "$version"
+}
+
 function info {
 	if [[ "$1" == "-h" || "$1" == "--help" ]] ; then
-		echo -e ">> thoth info\nPrint info about thoth" | fold -w 100 -s
+		__helptext ">> thoth info\nPrint info about thoth"
 		return
 	fi
 	cat << EndOfInfo
@@ -112,7 +120,7 @@ EndOfInfo
 
 function help {
 	if [[ "$1" == "-h" || "$1" == "--help" ]] ; then
-		echo -e ">> thoth help\nShow this menu and exit" | fold -w 100 -s
+		__helptext ">> thoth help\nShow this menu and exit"
 		return
 	fi
 	cat << EndOfHelp
@@ -122,21 +130,38 @@ Usage:
   thoth COMMAND
 
 Available commands:
-$(declare -F | awk '{print $NF}' | sed "s/^/  /")
+$(__listfunctions | sed "s/^/  /")
 
 $( \
-	for cmd in $(declare -F | awk '{print $NF}') ; do \
-		echo "$($self/thoth $cmd --help)" && \
+	for cmd in `__listfunctions` ; do \
+		echo "$(${self}/thoth $cmd --help)" && \
 		echo ; \
 	done \
 )
 EndOfHelp
 }
 
+# ============ META FUNCTIONS ============ #
+function __listfunctions {
+	functionlist=( `declare -F | awk '{print $NF}' | sed "s/^__.*//g"` )
+	for func in "${functionlist[@]}" ; do
+		echo "$func"
+	done
+}
+
+function __helptext {
+	echo -e "$@" | fold -w 100 -s
+}
+
+function __errortext {
+	>&2 echo "$@"
+}
+
+# ============ RUN LOGIC ============ #
 if declare -F -- "${1:-}" >/dev/null ; then
 	"$@"
 else
-	>&2 echo "thoth: err: no such command '$1'"
-	>&2 echo "Use 'help' for available commands"
+	__errortext "thoth: err: no such command '$1'"
+	__errortext "Use 'help' for available commands"
 	exit 1
 fi

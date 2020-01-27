@@ -90,7 +90,7 @@ function list {
 		__helptext ">> thoth list\nList all available commands"
 		return
 	fi
-	declare -F | awk '{print $NF}'
+	__listfunctions
 }
 
 function version {
@@ -143,7 +143,7 @@ EndOfHelp
 
 # ============ META FUNCTIONS ============ #
 function __listfunctions {
-	functionlist=( `declare -F | awk '{print $NF}' | sed "s/^__.*//g"` )
+	functionlist=( `declare -F | sed -e "s/declare -f //g" -e "s/__.*//g"` )
 	for func in "${functionlist[@]}" ; do
 		echo "$func"
 	done

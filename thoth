@@ -166,7 +166,7 @@ EndOfHelp
 
 # ============ META FUNCTIONS ============ #
 function __listfunctions {
-	functionlist=( `declare -F | sed -e "s/declare -f //g" -e "s/__.*//g"` )
+	functionlist=( `declare -F | sed -e "s/declare -f //g" -e "s/_.*//g" -e "s/-.*//g"` )
 	for func in "${functionlist[@]}" ; do
 		echo "$func"
 	done
@@ -178,6 +178,14 @@ function __helptext {
 
 function __errortext {
 	>&2 echo "$@"
+}
+
+function --help {
+	help "$@"
+}
+
+function -h {
+	help "$@"
 }
 
 # ============ RUN LOGIC ============ #

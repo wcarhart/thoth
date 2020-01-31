@@ -19,7 +19,7 @@ function define {
 	if [[ "$words" == "" ]] ; then
 		__errortext "thoth: err: could not find dictionary file"
 		__errortext "  Use \`install.sh\` to install the dictionary file globally, or"
-		__errortext "  run thoth.sh with the words.txt file in the same directory."
+		__errortext "  run thoth with the words.txt file in the same directory."
 		return 1
 	fi
 
@@ -28,12 +28,14 @@ function define {
 		return 1
 	fi
 
+	exit_code=0
 	for term in "$@" ; do
 		word="$(echo "$term" | tr a-z A-Z)"
 		locations=( "$(grep "^$word$" -n "$words")" )
 		if [[ $? -ne 0 ]] ; then
 			__errortext "thoth: no dictionary entry for '$term'"
-			return 1
+			exit_code=1
+			continue
 		fi
 		for location in ${locations[@]} ; do
 			line_number="${location%%:*}"
@@ -48,9 +50,16 @@ function define {
 			done < <(tail -n "+$line_number" "$words")
 		done
 	done
+	return $exit_code
 }
 
 function shell {
+	if [[ $thoth_shell -eq 1 ]] ; then
+		__errortext "thoth shell is already running"
+		return 1
+	fi
+
+	thoth_shell=1
 	if [[ "$1" == "-h" || "$1" == "--help" ]] ; then
 		__helptext ">> thoth shell\nOpen a new thoth shell to interpret thoth commands"
 		return

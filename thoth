@@ -32,6 +32,8 @@ function define {
 		output="$(\
 			sed -n -e "/^>>> ${term}$/,/>>>/p" "${dict}/${letter}/words.txt" | \
 			sed -e '$d' -e 's/>>> //g' | \
+			sed -e '/Examples:.*/d' | \
+			sed -e '/^  -.*/d' | \
 			sed -e '/Synonyms:.*/d' | \
 			sed -e '/Antonyms:.*/d' | \
 			sed -e '/Types:.*/d' | \
@@ -128,6 +130,8 @@ function synonym {
 			sed -n -e "/^>>> ${term}$/,/>>>/p" "${dict}/${letter}/words.txt" | \
 			sed -e '$d' -e 's/>>> //g' | \
 			sed -e '/(.*).*/d' | \
+			sed -e '/Examples:.*/d' | \
+			sed -e '/^  -.*/d' | \
 			sed -e '/Antonyms:.*/d' | \
 			sed -e '/Types:.*/d' | \
 			sed -e '/Type of:.*/d' | \
@@ -164,6 +168,8 @@ function antonym {
 		output="$(\
 			sed -n -e "/^>>> ${term}$/,/>>>/p" "${dict}/${letter}/words.txt" | \
 			sed -e '$d' -e 's/>>> //g' | \
+			sed -e '/Examples:.*/d' | \
+			sed -e '/^  -.*/d' | \
 			sed -e '/(.*).*/d' | \
 			sed -e '/Synonyms:.*/d' | \
 			sed -e '/Types:.*/d' | \
@@ -201,6 +207,8 @@ function type {
 		output="$(\
 			sed -n -e "/^>>> ${term}$/,/>>>/p" "${dict}/${letter}/words.txt" | \
 			sed -e '$d' -e 's/>>> //g' | \
+			sed -e '/Examples:.*/d' | \
+			sed -e '/^  -.*/d' | \
 			sed -e '/(.*).*/d' | \
 			sed -e '/Synonyms:.*/d' | \
 			sed -e '/Antonyms:.*/d' | \
@@ -238,6 +246,8 @@ function typeof {
 		output="$(\
 			sed -n -e "/^>>> ${term}$/,/>>>/p" "${dict}/${letter}/words.txt" | \
 			sed -e '$d' -e 's/>>> //g' | \
+			sed -e '/Examples:.*/d' | \
+			sed -e '/^  -.*/d' | \
 			sed -e '/(.*).*/d' | \
 			sed -e '/Synonyms:.*/d' | \
 			sed -e '/Antonyms:.*/d' | \
@@ -256,14 +266,42 @@ function typeof {
 	return $exit_code
 }
 
-# TODO: implement
 function example {
 	if [[ "$1" == "-h" || "$1" == "--help" ]] ; then
 		__helptext ">> thoth example WORD\n[NOT IMPLEMENTED] Find examples for word WORD"
 		return
 	fi
-	__errortext "thoth: err: not implemented yet"
-	return 1
+	
+	__verify_dict
+
+	exit_code=0
+	for term in "$@" ; do
+		letter="${term:0:1}"
+		if [[ ! -d "${dict}/${letter}" ]] ; then
+			__errortext "thoth: no examples of for '$term'"
+			exit_code=1
+			continue
+		fi
+		output="$(\
+			sed -n -e "/^>>> ${term}$/,/>>>/p" "${dict}/${letter}/words.txt" | \
+			sed -e '$d' -e 's/>>> //g' | \
+			sed -e '/(.*).*/d' | \
+			sed -e '/Synonyms:.*/d' | \
+			sed -e '/Antonyms:.*/d' | \
+			sed -e '/Types:.*/d' | \
+			sed -e '/Type of:.*/d' | \
+			cat -s \
+		)"
+		if [[ "$output" != *"Examples:"* ]] ; then
+			__errortext "thoth: no examples of for '$term'"
+			exit_code=1
+			continue
+		else
+			echo "$output"
+			echo
+		fi
+	done
+	return $exit_code
 }
 
 function list {

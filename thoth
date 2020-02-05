@@ -14,12 +14,7 @@ function define {
 		return
 	fi
 
-	if [[ "$dict" == "" ]] ; then
-		__errortext "thoth: err: could not find a dictionary directory"
-		__errortext "  Use \`install.sh\` to install the dictionary globally, or"
-		__errortext "  run thoth with the dictionary in the same directory."
-		return 1
-	fi
+	__verify_dict
 
 	if [[ $# -eq 0 ]] ; then
 		__errortext "thoth: what word do you want to define?"
@@ -30,13 +25,54 @@ function define {
 	for term in "$@" ; do
 		letter="${term:0:1}"
 		if [[ ! -d "${dict}/${letter}" ]] ; then
-			__errortext "thoth: no dictionary entry for '$term'"
+			__errortext "thoth: no definition for '$term'"
 			exit_code=1
 			continue
 		fi
-		output="$(sed -n -e "/^>>> ${term}$/,/>>>/p" "${dict}/${letter}/words.txt" | sed -e '$d' -e 's/>>> //g')"
+		output="$(\
+			sed -n -e "/^>>> ${term}$/,/>>>/p" "${dict}/${letter}/words.txt" | \
+			sed -e '$d' -e 's/>>> //g' | \
+			sed -e '/Synonyms:.*/d' | \
+			sed -e '/Antonyms:.*/d' | \
+			sed -e '/Types:.*/d' | \
+			sed -e '/Type of:.*/d' | \
+			cat -s \
+		)"
 		if [[ "$output" == "" ]] ; then
-			__errortext "thoth: no dictionary entry for '$term'"
+			__errortext "thoth: no definition for '$term'"
+			exit_code=1
+			continue
+		else
+			echo "$output"
+			echo
+		fi
+	done
+	return $exit_code
+}
+
+function lookup {
+	if [[ "$1" == "-h" || "$1" == "--help" ]] ; then
+		__helptext ">> thoth lookup WORD\nGet all information for word WORD"
+		return
+	fi
+
+	__verify_dict
+
+	exit_code=0
+	for term in "$@" ; do
+		letter="${term:0:1}"
+		if [[ ! -d "${dict}/${letter}" ]] ; then
+			__errortext "thoth: no lookup record for '$term'"
+			exit_code=1
+			continue
+		fi
+		output="$(\
+			sed -n -e "/^>>> ${term}$/,/>>>/p" "${dict}/${letter}/words.txt" | \
+			sed -e '$d' -e 's/>>> //g' | \
+			cat -s \
+		)"
+		if [[ "$output" == "" ]] ; then
+			__errortext "thoth: no lookup record for '$term'"
 			exit_code=1
 			continue
 		else
@@ -72,24 +108,152 @@ function shell {
 	done
 }
 
-# TODO: implement
 function synonym {
 	if [[ "$1" == "-h" || "$1" == "--help" ]] ; then
-		__helptext ">> thoth synonym WORD\n[NOT IMPLEMENTED] Find synonyms for word WORD"
+		__helptext ">> thoth synonym WORD\nFind synonyms for word WORD"
 		return
 	fi
-	__errortext "thoth: err: not implemented yet"
-	return 1
+
+	__verify_dict
+
+	exit_code=0
+	for term in "$@" ; do
+		letter="${term:0:1}"
+		if [[ ! -d "${dict}/${letter}" ]] ; then
+			__errortext "thoth: no synonyms for '$term'"
+			exit_code=1
+			continue
+		fi
+		output="$(\
+			sed -n -e "/^>>> ${term}$/,/>>>/p" "${dict}/${letter}/words.txt" | \
+			sed -e '$d' -e 's/>>> //g' | \
+			sed -e '/(.*).*/d' | \
+			sed -e '/Antonyms:.*/d' | \
+			sed -e '/Types:.*/d' | \
+			sed -e '/Type of:.*/d' | \
+			cat -s \
+		)"
+		if [[ "$output" != *"Synonyms:"* ]] ; then
+			__errortext "thoth: no synonyms for '$term'"
+			exit_code=1
+			continue
+		else
+			echo "$output"
+			echo
+		fi
+	done
+	return $exit_code
 }
 
-# TODO: implement
 function antonym {
 	if [[ "$1" == "-h" || "$1" == "--help" ]] ; then
-		__helptext ">> thoth antonym WORD\n[NOT IMPLEMENTED] Find antonyms for word WORD"
+		__helptext ">> thoth antonym WORD\nFind antonyms for word WORD"
 		return
 	fi
-	__errortext "thoth: err: not implemented yet"
-	return 1
+
+	__verify_dict
+
+	exit_code=0
+	for term in "$@" ; do
+		letter="${term:0:1}"
+		if [[ ! -d "${dict}/${letter}" ]] ; then
+			__errortext "thoth: no antonyms for '$term'"
+			exit_code=1
+			continue
+		fi
+		output="$(\
+			sed -n -e "/^>>> ${term}$/,/>>>/p" "${dict}/${letter}/words.txt" | \
+			sed -e '$d' -e 's/>>> //g' | \
+			sed -e '/(.*).*/d' | \
+			sed -e '/Synonyms:.*/d' | \
+			sed -e '/Types:.*/d' | \
+			sed -e '/Type of:.*/d' | \
+			cat -s \
+		)"
+		if [[ "$output" != *"Antonyms:"* ]] ; then
+			__errortext "thoth: no antonyms for '$term'"
+			exit_code=1
+			continue
+		else
+			echo "$output"
+			echo
+		fi
+	done
+	return $exit_code
+}
+
+function type {
+	if [[ "$1" == "-h" || "$1" == "--help" ]] ; then
+		__helptext ">> thoth type WORD\nFind types for word WORD"
+		return
+	fi
+
+	__verify_dict
+
+	exit_code=0
+	for term in "$@" ; do
+		letter="${term:0:1}"
+		if [[ ! -d "${dict}/${letter}" ]] ; then
+			__errortext "thoth: no types for '$term'"
+			exit_code=1
+			continue
+		fi
+		output="$(\
+			sed -n -e "/^>>> ${term}$/,/>>>/p" "${dict}/${letter}/words.txt" | \
+			sed -e '$d' -e 's/>>> //g' | \
+			sed -e '/(.*).*/d' | \
+			sed -e '/Synonyms:.*/d' | \
+			sed -e '/Antonyms:.*/d' | \
+			sed -e '/Type of:.*/d' | \
+			cat -s \
+		)"
+		if [[ "$output" != *"Types:"* ]] ; then
+			__errortext "thoth: no types for '$term'"
+			exit_code=1
+			continue
+		else
+			echo "$output"
+			echo
+		fi
+	done
+	return $exit_code
+}
+
+function typeof {
+	if [[ "$1" == "-h" || "$1" == "--help" ]] ; then
+		__helptext ">> thoth typeof WORD\nFind types of for word WORD"
+		return
+	fi
+
+	__verify_dict
+
+	exit_code=0
+	for term in "$@" ; do
+		letter="${term:0:1}"
+		if [[ ! -d "${dict}/${letter}" ]] ; then
+			__errortext "thoth: no types of for '$term'"
+			exit_code=1
+			continue
+		fi
+		output="$(\
+			sed -n -e "/^>>> ${term}$/,/>>>/p" "${dict}/${letter}/words.txt" | \
+			sed -e '$d' -e 's/>>> //g' | \
+			sed -e '/(.*).*/d' | \
+			sed -e '/Synonyms:.*/d' | \
+			sed -e '/Antonyms:.*/d' | \
+			sed -e '/Types:.*/d' | \
+			cat -s \
+		)"
+		if [[ "$output" != *"Type of:"* ]] ; then
+			__errortext "thoth: no types of for '$term'"
+			exit_code=1
+			continue
+		else
+			echo "$output"
+			echo
+		fi
+	done
+	return $exit_code
 }
 
 # TODO: implement
@@ -118,6 +282,7 @@ function version {
 	echo "$version"
 }
 
+# TODO: implement
 function add {
 	if [[ "$1" == "-h" || "$1" == "--help" ]] ; then
 		__helptext ">> thoth add\n[NOT IMPLEMENTED] Add a new word to the dictionary"
@@ -138,9 +303,8 @@ Description: $description
 Author:      Will Carhart
 Version:     v$version
 
-script file:     ${self}/thoth
-dictionary file: $words
-synonym file:    TODO
+script file: ${self}/thoth
+dictionary:  ${dict}   
 EndOfInfo
 }
 
@@ -181,6 +345,15 @@ function __helptext {
 
 function __errortext {
 	>&2 echo "$@"
+}
+
+function __verify_dict {
+	if [[ "$dict" == "" ]] ; then
+		__errortext "thoth: err: could not find a dictionary directory"
+		__errortext "  Use \`install.sh\` to install the dictionary globally, or"
+		__errortext "  run thoth with the dictionary in the same directory."
+		return 1
+	fi
 }
 
 function --help {

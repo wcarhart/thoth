@@ -268,7 +268,7 @@ function typeof {
 
 function example {
 	if [[ "$1" == "-h" || "$1" == "--help" ]] ; then
-		__helptext ">> thoth example WORD\n[NOT IMPLEMENTED] Find examples for word WORD"
+		__helptext ">> thoth example WORD\nFind examples for word WORD"
 		return
 	fi
 	

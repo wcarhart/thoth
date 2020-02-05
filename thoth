@@ -6,20 +6,18 @@
 self="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 version=0.0.0
 description="Helpful English diction tools for the command line"
-if [[ -f words.txt ]] ; then words="${self}/words.txt" ; fi
-if [[ -f /usr/local/etc/words.txt ]] ; then words=/usr/local/etc/words.txt ; fi
+if [[ -d dict/ ]] ; then dict="${self}/dict/" ; fi
 
-# TODO: update with new architecture
 function define {
 	if [[ "$1" == "-h" || "$1" == "--help" ]] ; then
 		__helptext ">> thoth define WORD\nDefine the word WORD"
 		return
 	fi
 
-	if [[ "$words" == "" ]] ; then
-		__errortext "thoth: err: could not find dictionary file"
-		__errortext "  Use \`install.sh\` to install the dictionary file globally, or"
-		__errortext "  run thoth with the words.txt file in the same directory."
+	if [[ "$dict" == "" ]] ; then
+		__errortext "thoth: err: could not find a dictionary directory"
+		__errortext "  Use \`install.sh\` to install the dictionary globally, or"
+		__errortext "  run thoth with the dictionary in the same directory."
 		return 1
 	fi
 
@@ -30,25 +28,21 @@ function define {
 
 	exit_code=0
 	for term in "$@" ; do
-		word="$(echo "$term" | tr a-z A-Z)"
-		locations=( "$(grep "^$word$" -n "$words")" )
-		if [[ $? -ne 0 ]] ; then
+		letter="${term:0:1}"
+		if [[ ! -d "${dict}/${letter}" ]] ; then
 			__errortext "thoth: no dictionary entry for '$term'"
 			exit_code=1
 			continue
 		fi
-		for location in ${locations[@]} ; do
-			line_number="${location%%:*}"
-			seen=0
-
-			while read -r line ; do
-				if [[ "$line" == "$(echo "$line" | tr a-z A-Z)" && "$line" != "" ]] ; then
-					let seen+=1
-					if [[ $seen -gt 1 ]] ; then break ; fi
-				fi
-				echo "$line"
-			done < <(tail -n "+$line_number" "$words")
-		done
+		output="$(sed -n -e "/^>>> ${term}$/,/>>>/p" "${dict}/${letter}/words.txt" | sed -e '$d' -e 's/>>> //g')"
+		if [[ "$output" == "" ]] ; then
+			__errortext "thoth: no dictionary entry for '$term'"
+			exit_code=1
+			continue
+		else
+			echo "$output"
+			echo
+		fi
 	done
 	return $exit_code
 }

@@ -10,11 +10,11 @@ if [[ -d dict/ ]] ; then dict="${self}/dict/" ; fi
 
 function define {
 	if [[ "$1" == "-h" || "$1" == "--help" ]] ; then
-		__helptext ">> thoth define WORD\nDefine the word WORD"
+		__helptext ">> thoth define WORD\nDefine the word WORD."
 		return
 	fi
 
-	__verify_dict
+	__verify_dict || return 1
 
 	if [[ $# -eq 0 ]] ; then
 		__errortext "thoth: what word do you want to define?"
@@ -54,11 +54,11 @@ function define {
 
 function lookup {
 	if [[ "$1" == "-h" || "$1" == "--help" ]] ; then
-		__helptext ">> thoth lookup WORD\nGet all information for word WORD"
+		__helptext ">> thoth lookup WORD\nGet all information for word WORD."
 		return
 	fi
 
-	__verify_dict
+	__verify_dict || return 1
 
 	exit_code=0
 	for term in "$@" ; do
@@ -93,7 +93,7 @@ function shell {
 
 	thoth_shell=1
 	if [[ "$1" == "-h" || "$1" == "--help" ]] ; then
-		__helptext ">> thoth shell\nOpen a new thoth shell to interpret thoth commands"
+		__helptext ">> thoth shell\nOpen a new thoth shell to interpret thoth commands."
 		return
 	fi
 
@@ -112,11 +112,11 @@ function shell {
 
 function synonym {
 	if [[ "$1" == "-h" || "$1" == "--help" ]] ; then
-		__helptext ">> thoth synonym WORD\nFind synonyms for word WORD"
+		__helptext ">> thoth synonym WORD\nFind synonyms for word WORD."
 		return
 	fi
 
-	__verify_dict
+	__verify_dict || return 1
 
 	exit_code=0
 	for term in "$@" ; do
@@ -151,11 +151,11 @@ function synonym {
 
 function antonym {
 	if [[ "$1" == "-h" || "$1" == "--help" ]] ; then
-		__helptext ">> thoth antonym WORD\nFind antonyms for word WORD"
+		__helptext ">> thoth antonym WORD\nFind antonyms for word WORD."
 		return
 	fi
 
-	__verify_dict
+	__verify_dict || return 1
 
 	exit_code=0
 	for term in "$@" ; do
@@ -190,11 +190,11 @@ function antonym {
 
 function type {
 	if [[ "$1" == "-h" || "$1" == "--help" ]] ; then
-		__helptext ">> thoth type WORD\nFind types for word WORD"
+		__helptext ">> thoth type WORD\nFind types for word WORD."
 		return
 	fi
 
-	__verify_dict
+	__verify_dict || return 1
 
 	exit_code=0
 	for term in "$@" ; do
@@ -229,11 +229,11 @@ function type {
 
 function typeof {
 	if [[ "$1" == "-h" || "$1" == "--help" ]] ; then
-		__helptext ">> thoth typeof WORD\nFind types of for word WORD"
+		__helptext ">> thoth typeof WORD\nFind types of for word WORD."
 		return
 	fi
 
-	__verify_dict
+	__verify_dict || return 1
 
 	exit_code=0
 	for term in "$@" ; do
@@ -268,11 +268,11 @@ function typeof {
 
 function example {
 	if [[ "$1" == "-h" || "$1" == "--help" ]] ; then
-		__helptext ">> thoth example WORD\nFind examples for word WORD"
+		__helptext ">> thoth example WORD\nFind examples for word WORD."
 		return
 	fi
 	
-	__verify_dict
+	__verify_dict || return 1
 
 	exit_code=0
 	for term in "$@" ; do
@@ -306,7 +306,7 @@ function example {
 
 function list {
 	if [[ "$1" == "-h" || "$1" == "--help" ]] ; then
-		__helptext ">> thoth list\nList all available commands"
+		__helptext ">> thoth list\nList all available commands."
 		return
 	fi
 	__listfunctions
@@ -314,16 +314,26 @@ function list {
 
 function version {
 	if [[ "$1" == "-h" || "$1" == "--help" ]] ; then
-		__helptext ">> thoth version\nPrint thoth version"
+		__helptext ">> thoth version\nPrint thoth version."
 		return
 	fi
 	echo "$version"
 }
 
 # TODO: implement
+function install {
+	if [[ "$1" == "-h" || "$1" == "--help" ]] ; then
+		__helptext ">> thoth install DICT\n[NOT IMPLEMENTED] Install a new dictionary DICT to use in place of thoth's default dictionary (the DICT argument needs to be a valid path to a dictionary, where a dictionary is a directory of word records). To view the required dictionary format, please review the currently installed dictionary, which can be viewed with \`thoth info\`."
+		return
+	fi
+	__errortext "thoth: err: not implemented yet"
+	return 1
+}
+
+# TODO: implement
 function add {
 	if [[ "$1" == "-h" || "$1" == "--help" ]] ; then
-		__helptext ">> thoth add\n[NOT IMPLEMENTED] Add a new word to the dictionary"
+		__helptext ">> thoth add\n[NOT IMPLEMENTED] Add a new word to the dictionary."
 		return
 	fi
 	__errortext "thoth: err: not implemented yet"
@@ -332,7 +342,7 @@ function add {
 
 function info {
 	if [[ "$1" == "-h" || "$1" == "--help" ]] ; then
-		__helptext ">> thoth info\nPrint info about thoth"
+		__helptext ">> thoth info\nPrint info about thoth."
 		return
 	fi
 	cat << EndOfInfo
@@ -348,7 +358,7 @@ EndOfInfo
 
 function help {
 	if [[ "$1" == "-h" || "$1" == "--help" ]] ; then
-		__helptext ">> thoth help\nShow this menu and exit"
+		__helptext ">> thoth help\nShow this menu and exit."
 		return
 	fi
 	cat << EndOfHelp
@@ -371,7 +381,7 @@ EndOfHelp
 
 # ============ META FUNCTIONS ============ #
 function __listfunctions {
-	functionlist=( `declare -F | sed -e "s/declare -f //g" -e "s/_.*//g" -e "s/-.*//g"` )
+	functionlist=( `declare -F | sed -e 's/declare -f //g' -e 's/[_-].*//g'` )
 	for func in "${functionlist[@]}" ; do
 		echo "$func"
 	done

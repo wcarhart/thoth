@@ -3,11 +3,17 @@
 # thoth - https://en.wikipedia.org/wiki/Thoth
 # helpful English diction tools for the command line
 
+# ============ STARTUP ============ #
 self="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 version=0.0.0
 description="Helpful English diction tools for the command line"
-if [[ -d dict/ ]] ; then dict="${self}/dict/" ; fi
+if [[ -f .thothdict ]] ; then
+	dict="$(cat .thothdict)"
+else
+	if [[ -d dict/ ]] ; then dict="${self}/dict/" ; echo "$dict" > .thothdict ; fi
+fi
 
+# ============ AVAILABLE CLI FUNCTIONS ============ #
 function define {
 	if [[ "$1" == "-h" || "$1" == "--help" ]] ; then
 		__helptext ">> thoth define WORD\nDefine the word WORD."
@@ -59,6 +65,11 @@ function lookup {
 	fi
 
 	__verify_dict || return 1
+
+	if [[ $# -eq 0 ]] ; then
+		__errortext "thoth: what word do you want to lookup?"
+		return 1
+	fi
 
 	exit_code=0
 	for term in "$@" ; do
@@ -118,6 +129,11 @@ function synonym {
 
 	__verify_dict || return 1
 
+	if [[ $# -eq 0 ]] ; then
+		__errortext "thoth: for what word do you want to find synonyms?"
+		return 1
+	fi
+
 	exit_code=0
 	for term in "$@" ; do
 		letter="${term:0:1}"
@@ -156,6 +172,11 @@ function antonym {
 	fi
 
 	__verify_dict || return 1
+
+	if [[ $# -eq 0 ]] ; then
+		__errortext "thoth: for what word do you want to find antonyms?"
+		return 1
+	fi
 
 	exit_code=0
 	for term in "$@" ; do
@@ -196,6 +217,11 @@ function type {
 
 	__verify_dict || return 1
 
+	if [[ $# -eq 0 ]] ; then
+		__errortext "thoth: for what word do you want to find types?"
+		return 1
+	fi
+
 	exit_code=0
 	for term in "$@" ; do
 		letter="${term:0:1}"
@@ -235,6 +261,11 @@ function typeof {
 
 	__verify_dict || return 1
 
+	if [[ $# -eq 0 ]] ; then
+		__errortext "thoth: for what word do you want to find types of?"
+		return 1
+	fi
+
 	exit_code=0
 	for term in "$@" ; do
 		letter="${term:0:1}"
@@ -273,6 +304,11 @@ function example {
 	fi
 	
 	__verify_dict || return 1
+
+	if [[ $# -eq 0 ]] ; then
+		__errortext "thoth: for what word do you want to find examples?"
+		return 1
+	fi
 
 	exit_code=0
 	for term in "$@" ; do
@@ -320,14 +356,39 @@ function version {
 	echo "$version"
 }
 
-# TODO: implement
 function install {
 	if [[ "$1" == "-h" || "$1" == "--help" ]] ; then
-		__helptext ">> thoth install DICT\n[NOT IMPLEMENTED] Install a new dictionary DICT to use in place of thoth's default dictionary (the DICT argument needs to be a valid path to a dictionary, where a dictionary is a directory of word records). To view the required dictionary format, please review the currently installed dictionary, which can be viewed with \`thoth info\`."
+		__helptext ">> thoth install DICT\nInstall a new dictionary DICT to use in place of thoth's default dictionary (the DICT argument needs to be a valid path to a dictionary, where a dictionary is a directory of word records). To view the required dictionary format, please review the default installed dictionary, which can be viewed with \`thoth info\` (if you've updated the installed dictionary, you can revert to the default with \`thoth reset\`)."
 		return
 	fi
-	__errortext "thoth: err: not implemented yet"
-	return 1
+
+	if [[ "$1" == "" ]] ; then
+		__errortext "thoth: err: missing path to DICT"
+		return 1
+	fi
+
+	if [[ ! -d "$1" ]] ; then
+		__errortext "thoth: err: no such directory '$1'"
+		return 1
+	fi
+
+	for letter in a b c d e f g h i j k l m n o p q r s t u v w x y z ; do
+		if [[ ! -f "${1}/${letter}/words.txt" ]] ; then
+			__errortext "thoth: err: supplied dictionary '$1' is missing words for the letter '$letter'"
+			return 1
+		fi
+	done
+
+	dict="$1"
+	echo "$dict" > .thothdict
+}
+
+function reset {
+	if [[ "$1" == "-h" || "$1" == "--help" ]] ; then
+		__helptext ">> thoth reset\nReset thoth's dictionary to the default dictionary."
+		return
+	fi
+	if [[ -f .thothdict ]] ; then rm -rf .thothdict ; fi
 }
 
 # TODO: implement

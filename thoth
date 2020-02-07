@@ -6,7 +6,7 @@
 self="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 version=0.0.0
 description="Helpful English diction tools for the command line"
-if [[ -d dict/ ]] ; then dict="${self}/dict/" ; fi
+if [[ -d output/ ]] ; then dict="${self}/output/" ; fi
 
 function define {
 	if [[ "$1" == "-h" || "$1" == "--help" ]] ; then

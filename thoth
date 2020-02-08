@@ -399,14 +399,11 @@ function reset {
 	if [[ -f .thothdict ]] ; then rm -rf .thothdict ; fi
 }
 
-# TODO: finish implementing
 function add {
 	if [[ "$1" == "-h" || "$1" == "--help" ]] ; then
-		__helptext ">> thoth add\n[NOT IMPLEMENTED] Add a new word to the dictionary."
+		__helptext ">> thoth add\nAdd a new word to the dictionary."
 		return
 	fi
-	# __errortext "thoth: err: not implemented yet"
-	# return 1
 
 	__verify_dict
 
@@ -416,6 +413,10 @@ function add {
 	read word
 	if lookup "$word" > /dev/null 2>&1 ; then
 		__errortext "thoth: err: '$word' is already in the dictionary"
+		return 1
+	fi
+	if [ -n "$numdefs" ] && [ "$numdefs" -eq "$numdefs" ] ; then
+		__errortext "thoth: err: definitions for numbers are not supported"
 		return 1
 	fi
 
@@ -439,43 +440,21 @@ function add {
 			read answer
 			uppercase="`echo ${aspect:0:1} | tr '[a-z]' '[A-Z]'`${aspect:1}"
 			if [[ "$aspect" == "examples" ]] ; then
-				output="${output}${uppercase}:\n  - "
-				# examples=( `echo ${answer} | sed -e 's/^/"/g' -e 's/$/"/g' -e 's/,/" "/g'` )
-				# examples=
-				# examples="$(echo "$answer" | sed -e 's/, /\'$'\n  - /g')"
+				output="${output}${uppercase}:\n  - \""
 				while read -n1 character ; do
-					if [[ "$character" == "," ]] ; then
-						output="${output}\n  -"
+					if [[ "$character" == "" ]] ; then
+						output="${output} "
+					elif [[ "$character" == "," ]] ; then
+						output="${output}\"\n  - \""
+					else
+						output="${output}${character}"
 					fi
-					output="${output}${character}"
-				done < <(echo -n "$answer")	
-				# examples="$(echo "$answer" | tr ', ' '\012  - ')"
-				# output="${output}`echo -e ${examples}`"
-				# for e in `__splitby ', ' "$answer"` ; do
-				# 	output="${output}  - \"${e}\"\n"
-				# done
+				done < <(echo -n "$answer")
+				output="${output}\"\n"
 			else
 				output="${output}${uppercase}: ${answer}\n"
 			fi
 		done
-	}
-
-	function __splitby {
-		separator=$1
-		string=$2
-
-		tmp=${string//"$separator"/$'\2'}
-		IFS=$'\2' read -a arr <<< "$tmp"
-		for substr in "${arr[@]}" ; do
-		    echo "$substr"
-		done
-		echo
-	}
-
-	function __joinby {
-		local IFS="$1"
-		shift
-		echo "$@"
 	}
 
 	for def in `seq 1 $numdefs` ; do
@@ -490,10 +469,12 @@ function add {
 		read definition
 		output="${output}(${tos}) ${definition}\n"
 		__getdetails $def examples synonyms antonyms types "type of"
-		output="${output}\n"
+		output="${output}"
 	done
 
-	echo -e "${output}"
+	letter="${word:0:1}"
+	echo -e "$output" >> "${dict}/${letter}/words.txt"
+	echo "Added '$word' to the dictionary"
 }
 
 function info {

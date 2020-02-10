@@ -1,0 +1,937 @@
+>>> zealously
+
+(adv) in a passionate manner
+
+>>> zestfully
+
+(adv) vigorously and with enthusiastic enjoyment
+Synonyms: zestily
+
+>>> zestily
+
+(adv) with zest 
+Synonyms: zestfully
+
+>>> zigzag
+
+(adv) in a zigzag course or on a zigzag path
+
+(adj) having short sharp turns or angles
+Synonyms: zig-zag
+
+(n) an angular shape characterized by sharp turns in alternating directions
+Synonyms: zig, zag
+
+(v) travel along a zigzag path
+Synonyms: crank
+
+>>> zoophagous
+
+(adj) of animals, carnivorous
+Synonyms: flesh-eating
+
+>>> zippy
+
+(adj) marked by lively action
+Synonyms: spirited
+
+(adj) quick and energetic
+Synonyms: rattling
+
+>>> zealous
+
+(adj) marked by active interest and enthusiasm
+Synonyms: avid
+
+>>> zaftig
+
+(adj) a woman being healthily plump and vigorous
+Synonyms: buxom
+
+>>> zoftig
+
+(adj) healthily plump and vigorous, usually referring to a woman
+Synonyms: buxom
+
+>>> zygodactyl
+
+(adj) of bird feet, having the first and fourth toes directed backward the second and third forward
+
+>>> zany
+
+(adj) ludicrous, foolish, like a clown
+Synonyms: buffoonish
+
+(n) a buffoon in one of the old comedies, or someone who is a stupid incompetent fool
+
+>>> zero
+
+(adj) indicating the absence of any or all units under consideration
+
+(adj) indicating an initial point or origin
+
+(adj) of or relating to the null set (a set with no members)
+
+(n) the sight setting that will cause a projectile to hit the center of the target with no wind blowing
+
+(n) the point on a scale from which positive or negative numerical quantities can be measured
+Synonyms: zero point
+
+(n) a quantity of no importance
+Synonyms: nothing
+
+(n) a mathematical element that when added to another number yields the same number
+Synonyms: cipher, cypher, nought
+
+(v) adjust, as by firing under test conditions, the zero of a gun
+Synonyms: zero in
+
+(v) adjust (an instrument or device) to zero value
+
+(adj) having no measurable or otherwise determinable value
+
+>>> zeroth
+
+(adj) preceding even the first
+
+>>> zillion
+
+(n) a very large indefinite number, usually hyperbole
+Synonyms: billion, trillion, jillion, gazillion, million
+
+(adj) very large indeterminate number
+
+>>> zestful
+
+(adj) marked by spirited enjoyment
+Synonyms: yeasty
+
+>>> zesty
+
+(adj) marked by spirited enjoyment
+Synonyms: yeasty
+
+(adj) having an agreeably pungent taste
+Synonyms: savory
+
+>>> zig-zag
+
+(adj) having short sharp turns or angles
+Synonyms: zigzag
+
+>>> zygomorphic
+
+(adj) capable of division into symmetrical halves by only one longitudinal plane passing through the axis
+Synonyms: bilaterally symmetrical
+
+>>> zygomorphous
+
+(adj) capable of division into symmetrical halves by only one longitudinal plane passing through the axis
+Synonyms: bilaterally symmetrical
+
+>>> zonal
+
+(adj) associated with or divided into zones
+
+(adj) relating to or similar to a zone
+Synonyms: zonary
+
+>>> zoic
+
+(adj) pertaining to animals or animal life or action
+
+>>> zoological
+
+(adj) of or relating to animals or animal groups
+
+(adj) concerning the study of animals and their classification and properties
+
+>>> zygotic
+
+(adj) of or relating to a zygote
+
+>>> Zoroastrian
+
+(adj) of or pertaining to Zoroaster or Zoroastrianism
+
+>>> zymotic
+
+(adj) relating to or caused by infection
+
+(adj) of or relating to or causing fermentation
+Synonyms: zymolytic
+
+>>> zymolytic
+
+(adj) of or relating to or causing fermentation
+Synonyms: zymotic
+
+>>> Zolaesque
+
+(adj) in the manner of Emile Zola
+
+>>> zenithal
+
+(adj) relating to or located at or near the zenith
+
+>>> Zimbabwean
+
+(adj) of or relating to or characteristic of Zimbabwe or its people
+
+(n) a person from Zimbabwe or of Zimbabwean descent
+
+>>> Zionist
+
+(adj) relating to or characteristic of a supporter of Zionism
+
+>>> zonary
+
+(adj) relating to or of the nature of a zone
+Synonyms: zonal
+
+>>> zodiacal
+
+(adj) relating to or included in the zodiac
+
+>>> Zapotec
+
+(adj) of or relating to the language or culture of the Zapotec people
+
+>>> zoonotic
+
+(adj) of or relating to or constituting zoonosis
+
+>>> zygomatic
+
+(adj) of or relating to the cheek region of the face
+
+(n) the arch of bone beneath the eye that forms the prominence of the cheek
+Synonyms: cheekbone, malar, malar bone, jugal bone, os zygomaticum
+
+>>> zymoid
+
+(adj) resembling an enzyme
+
+>>> Zairean
+
+(adj) of or relating to or characteristic of Zaire or its people
+Synonyms: Zairese
+
+>>> Zairese
+
+(adj) of, relating to, or characteristic of Zaire or its people
+Synonyms: Zairean
+
+>>> Zambian
+
+(adj) of or relating to or characteristic of Zambia or its people
+
+>>> zoom
+
+(n) the act of rising upward into the air
+Synonyms: soar
+
+(n) a rapid rise
+Synonyms: rapid climb, rapid growth
+
+(v) rise rapidly
+Synonyms: soar
+
+(v) move along very quickly
+Synonyms: whizz, zoom along, whizz along
+
+(v) move with a low humming noise
+
+>>> zero-sum game
+
+(n) a game in which the total of all the gains and losses is zero
+
+>>> zoophilia
+
+(n) a sexual attraction to animals
+Synonyms: zoophilism
+
+>>> zoophilism
+
+(n) a sexual attraction to animals
+Synonyms: zoophilia
+
+>>> zooerastia
+
+(n) sexual activity between a person and an animal
+Synonyms: bestiality
+
+>>> zooerasty
+
+(n) sexual activity between a person and an animal
+Synonyms: bestiality
+
+>>> zizz
+
+(n) a nap or short period of sleeping
+
+(n) a buzzing or whizzing sound
+
+>>> zoning
+
+(n) dividing an area into zones or sections reserved for different purposes such as residence and business and manufacturing etc.
+
+>>> zone fire
+
+(n) artillery or mortar fire delivered in a constant direction at several quadrant elevations
+
+>>> zoolatry
+
+(n) the worship of animals
+Synonyms: animal-worship
+
+>>> zooplankton
+
+(n) animal constituent of plankton
+
+>>> zooid
+
+(n) one of the distinct individuals forming a colonial animal such as a bryozoan or hydrozoan
+
+>>> zoomastigote
+
+(n) flagellate protozoan lacking photosynthesis and other plant-like characteristics
+
+>>> zebra-tailed lizard
+
+(n) swift lizard with long black-banded tail and long legs
+Synonyms: gridiron-tailed lizard
+
+>>> zoophyte
+
+(n) any of various invertebrate animals resembling a plant such as a sea anemone or coral or sponge
+
+>>> zebra mussel
+
+(n) inch long mollusk, known for being a highly invasive species in various parts of the world
+
+>>> zebra
+
+(n) any of several fleet black-and-white striped African equines
+
+>>> zebu
+
+(n) a domesticated ox having a humped back, long horns, and a large dewlap
+
+>>> zoo
+
+(n) the facility where wild animals are housed for exhibition
+Synonyms: menagerie
+
+>>> zebra crossing
+
+(n) street crossing where pedestrians have right of way
+Synonyms: pedestrian crossing
+
+>>> zori
+
+(n) a sandal attached to the foot by a thong over the toes
+Synonyms: pusher
+
+>>> zip
+
+(n) a fastener for locking together two toothed edges by means of a sliding tab
+Synonyms: slide fastener
+
+(n) forceful exertion
+Synonyms: energy
+
+(n) a quantity of no importance
+Synonyms: nothing
+
+(v) close with a zipper
+Synonyms: zipper, zip up
+
+(v) move very fast
+Synonyms: speed
+
+>>> zipper
+
+(n) a fastener for locking together two toothed edges by means of a sliding tab
+Synonyms: slide fastener
+
+(v) to close with a zipper
+Synonyms: zip
+
+>>> zip fastener
+
+(n) a fastener for locking together two toothed edges by means of a sliding tab
+Synonyms: slide fastener
+
+>>> zoom lens
+
+(n) a camera lens that magnifies the image
+Synonyms: telephoto lens
+
+>>> Zamboni
+
+(n) the trademark for a machine that smooths the ice in an ice-skating rink
+
+>>> zapper
+
+(n) an electrical device that can injure or kill by means of electric currents
+
+>>> zarf
+
+(n) an ornamental metal cup-shaped holder for a hot coffee cup
+
+>>> zeppelin
+
+(n) a large rigid dirigible designed to carry passengers or bombs
+
+>>> zikkurat
+
+(n) a rectangularly tiered temple or terraced mound erected by the ancient Assyrians and Babylonians
+Synonyms: 
+
+>>> ziggurat
+
+(n) a rectangular tiered temple or terraced mound erected by the ancient Assyrians and Babylonians
+Synonyms: 
+
+>>> zikurat
+
+(n) a rectangular tiered temple or terraced mound erected by the ancient Assyrians and Babylonians
+Synonyms: 
+
+>>> zill
+
+(n) one of a pair of small metallic cymbals worn on the thumb and middle finger
+
+>>> zip gun
+
+(n) a crude homemade pistol
+
+>>> zither
+
+(n) a musical stringed instrument with strings stretched over a flat sounding board
+Synonyms: cither
+
+>>> zithern
+
+(n) a musical stringed instrument with strings stretched over a flat sounding board
+Synonyms: cither
+
+>>> zodiac
+
+(n) in astrology, a circular diagram representing the 12 zodiacal constellations and showing their signs
+
+(n) a belt-shaped region in the heavens on either side to the ecliptic
+
+>>> zoot suit
+
+(n) a flashy suit of extreme cut
+
+>>> zeal
+
+(n) prompt willingness
+Synonyms: readiness
+
+(n) excessive fervor to do something or accomplish some end
+
+(n) a feeling of strong eagerness, usually in favor of a person or cause
+Synonyms: elan
+
+>>> zing
+
+(n) the activeness of an energetic personality
+Synonyms: dynamism
+
+(n) a brief high-pitched buzzing or humming sound
+
+>>> zest
+
+(n) a tart spicy quality
+Synonyms: nip
+
+(n) vigorous and enthusiastic enjoyment
+Synonyms: relish, gusto, zestfulness
+
+(v) add herbs or spices to
+Synonyms: spice
+
+>>> zygoma
+
+(n) the slender arch formed by the temporal process of the cheekbone that bridges to the zygomatic process of the temporal bone
+Synonyms: zygomatic arch, arcus zygomaticus
+
+>>> zygomatic arch
+
+(n) the slender arch formed by the temporal process of the cheekbone that bridges to the zygomatic process of the temporal bone
+Synonyms: zygoma
+
+>>> zygote
+
+(n) (genetics) the diploid cell resulting from the union of a haploid spermatozoon and ovum (including the organism that develops from that cell)
+Synonyms: fertilized ovum
+
+>>> zona pellucida
+
+(n) thick membrane around the mammalian ovum
+
+>>> zone
+
+(n) (anatomy) any encircling or beltlike structure
+Synonyms: zona
+
+(n) an area or region distinguished from adjacent parts by a distinctive feature or characteristic
+
+(n) any of the regions of the surface of the Earth loosely divided according to latitude or longitude
+Synonyms: geographical zone
+
+(n) a locally circumscribed place characterized by some distinctive features
+
+(v) separate or apportion into sections
+Synonyms: partition
+
+(v) regulate housing in
+Synonyms: district
+
+>>> zona
+
+(n) in anatomy, any encircling or beltlike structure
+Synonyms: zone
+
+>>> zonule
+
+(n) small beltlike zone
+Synonyms: zonula
+
+>>> zonula
+
+(n) small beltlike zone
+Synonyms: zonule
+
+>>> zoomorphism
+
+(n) the attribution of animal forms or qualities to a god
+
+>>> zero point
+
+(n) the point on a scale from which positive or negative numerical quantities can be measured
+Synonyms: zero
+
+>>> zakat
+
+(n) an Islamic religious tax
+
+>>> z-axis
+
+(n) the third axis in a 3-dimensional coordinate system
+
+>>> z axis
+
+(n) the third axis in a 3-dimensional coordinate system
+
+>>> zymology
+
+(n) the branch of chemistry concerned with fermentation (as in making wine or brewing or distilling)
+Synonyms: zymurgy
+
+>>> zymurgy
+
+(n) the branch of chemistry concerned with fermentation, as in making wine, brewing, or distilling
+Synonyms: zymology
+
+>>> zoology
+
+(n) the branch of biology that studies animals
+
+(n) all the animal life in a particular region or period
+Synonyms: fauna
+
+>>> zealotry
+
+(n) excessive intolerance of opposing views
+Synonyms: fanaticism
+
+>>> zero tolerance
+
+(n) extreme intolerance of antisocial behavior, usually by an uncompromising application of the law
+
+>>> ZIP code
+
+(n) a code of letters and digits added to a postal address to aid in the sorting of mail
+Synonyms: ZIP, zip code, postcode, postal code
+
+>>> ZIP
+
+(n) a code of letters and digits added to a postal address to aid in the sorting of mail
+Synonyms: ZIP code
+
+>>> zip code
+
+(n) a code of letters and digits added to a postal address to aid in the sorting of mail
+Synonyms: ZIP code
+
+>>> zayin
+
+(n) the 7th letter of the Hebrew alphabet
+
+>>> z
+
+(n) the 26th letter of the Roman alphabet
+
+>>> zee
+
+(n) the 26th letter of the Roman alphabet
+
+>>> zed
+
+(n) the 26th letter of the Roman alphabet
+
+>>> zeta
+
+(n) the 6th letter of the Greek alphabet
+
+>>> zydeco
+
+(n) music of southern Louisiana that combines French dance melodies with Caribbean music and blues
+
+>>> zeugma
+
+(n) use of a word to govern two or more words though appropriate to only one
+
+>>> zinger
+
+(n) a striking, amusing or caustic remark
+
+>>> zap
+
+(n) a sudden event that imparts energy or excitement, usually with a dramatic impact
+
+(v) cook or heat in a microwave oven
+Synonyms: nuke
+
+(v) strike at with firepower or bombs
+Synonyms: nuke
+
+(v) kill with or as if with a burst of gunfire or electric current or as if by shooting
+Synonyms: vaporize, vaporise
+
+(v) strike suddenly and with force
+
+>>> zestfulness
+
+(n) vigorous and enthusiastic enjoyment
+Synonyms: zest
+
+>>> zabaglione
+
+(n) light foamy custard-like dessert served hot or chilled
+Synonyms: sabayon
+
+>>> zwieback
+
+(n) slice of sweet raised bread baked again until it is brown and hard and crisp
+Synonyms: rusk, twice-baked bread
+
+>>> zucchini
+
+(n) small cucumber-shaped vegetable marrow
+Synonyms: courgette
+
+(n) marrow squash plant whose fruit are eaten when small
+Synonyms: courgette
+
+>>> zep
+
+(n) a large sandwich made of a long crusty roll split lengthwise and filled with meats, cheese, tomato, onion, lettuce, and condiments
+Synonyms: torpedo
+
+>>> ziti
+
+(n) medium-sized tubular pasta in short pieces
+
+>>> zinfandel
+
+(n) dry fruity red wine from California
+
+>>> zombie
+
+(n) a cocktail made up of several kinds of rum with fruit juice and usually apricot liqueur
+Synonyms: 
+
+(n) someone who acts or responds in a mechanical or apathetic way
+Synonyms: automaton
+
+(n) a dead body that has been brought back to life by a supernatural force
+Synonyms: living dead
+
+(n) a god of voodoo cults of African origin, worshipped especially in the West Indies
+Synonyms: snake god
+
+(n) in voodooism, a spirit or supernatural force that reanimates a dead body
+Synonyms: 
+
+>>> zombi
+
+(n) a cocktail made up of several kinds of rum with fruit juice and usually apricot liqueur
+Synonyms: 
+
+(n) someone who acts or responds in a mechanical or apathetic way
+Synonyms: automaton
+
+(n) a dead body that has been brought back to life by a supernatural force
+Synonyms: living dead
+
+(n) a god of voodoo cults of African origin, worshipped especially in the West Indies
+Synonyms: snake god
+
+(n) in voodooism, a spirit or supernatural force that reanimates a dead body
+Synonyms: 
+
+>>> zone of interior
+
+(n) the part of the theater of war not included in the theater of operations
+
+>>> zenith
+
+(n) highest point, peak
+
+(n) in astronomy, the point above the observer that is directly opposite the nadir on the imaginary sphere against which celestial bodies appear to be projected
+
+>>> zealot
+
+(n) a fervent and even militant proponent of something
+Synonyms: partisan
+
+>>> zoo keeper
+
+(n) the chief person responsible for a zoological garden
+
+>>> zookeeper
+
+(n) the chief person responsible for a zoological garden
+
+>>> zoologist
+
+(n) a specialist in the branch of biology dealing with animals
+Synonyms: animal scientist
+
+>>> zephyr
+
+(n) a slight wind, usually refreshing
+Synonyms: air
+
+>>> zoospore
+
+(n) an asexual spore of some algae and fungi that moves by means of flagella
+
+>>> zamang
+
+(n) large ornamental tropical American tree with bipinnate leaves and globose clusters of flowers with crimson stamens and seed pods that are eaten by cattle
+Synonyms: rain tree
+
+>>> zebrawood
+
+(n) any of various trees or shrubs having mottled or striped wood
+
+(n) handsomely striped or mottled wood of the zebrawood tree
+
+>>> zygospore
+
+(n) a plant spore formed by two similar sexual cells
+
+>>> zero coupon bond
+
+(n) a bond that is issued at a deep discount from its value at maturity and pays no interest during the life of the bond
+Synonyms: zero-coupon bond
+
+>>> zero-coupon bond
+
+(n) a bond that is issued at a deep discount from its value at maturity and pays no interest during the life of the bond
+Synonyms: zero coupon bond
+
+>>> zero-coupon security
+
+(n) a security that makes no interest payments but instead is sold at a deep discount from its face value
+
+>>> zygotene
+
+(n) the second stage of the prophase of meiosis
+
+>>> zymosis
+
+(n) (medicine) the development and spread of an infectious disease (especially one caused by a fungus)
+
+(n) a process in which an agent causes an organic substance to break down into simpler substances
+Synonyms: zymolysis, fermentation, fermenting, ferment
+
+>>> zymolysis
+
+(n) a process in which an agent causes an organic substance to break down into simpler substances
+Synonyms: zymosis
+
+>>> zettabyte
+
+(n) a unit of information equal to 1024 exbibytes or 2^70 bytes
+Synonyms: zebibyte
+
+(n) a unit of information equal to 1000 exabytes or 10^21 bytes
+
+>>> zebibyte
+
+(n) a unit of information equal to 1024 exbibytes or 2^70 bytes
+Synonyms: zettabyte
+
+>>> zettabit
+
+(n) a unit of information equal to 1000 exabits or 10^21 bits
+
+>>> zebibit
+
+(n) a unit of information equal to 1024 exbibits or 2^70 bits
+
+>>> zaire
+
+(n) the basic unit of money in Zaire
+
+>>> zloty
+
+(n) the basic unit of money in Poland
+
+>>> zilch
+
+(n) a quantity of no importance
+Synonyms: nothing
+
+>>> zippo
+
+(n) a quantity of no importance
+Synonyms: nothing
+
+>>> zig
+
+(n) an angular shape characterized by sharp turns in alternating directions
+Synonyms: zigzag
+
+>>> zag
+
+(n) an angular shape characterized by sharp turns in alternating directions
+Synonyms: zigzag
+
+>>> zoster
+
+(n) eruptions along a nerve path often accompanied by severe neuralgia
+Synonyms: herpes zoster
+
+>>> zoonosis
+
+(n) an animal disease that can be transmitted to humans
+Synonyms: zoonotic disease
+
+>>> zoonotic disease
+
+(n) an animal disease that can be transmitted to humans
+Synonyms: zoonosis
+
+>>> zit
+
+(n) a small and inflamed elevation of the skin caused by the collection of excess oils in pores
+Synonyms: hickey
+
+>>> zoophobia
+
+(n) a morbid fear of animals
+
+>>> zoopsia
+
+(n) visual hallucination of animals
+
+>>> zoanthropy
+
+(n) the delusion that you have assumed the form of an animal
+
+>>> Zeitgeist
+
+(n) the spirit of the time
+
+>>> zinc
+
+(n) a bluish-white lustrous metallic element
+
+(v) coat or cover with zinc
+
+>>> zirconium
+
+(n) a lustrous grey strong metallic element resembling titanium
+
+>>> zymogen
+
+(n) any of a group of compounds that are inactive precursors of enzymes and require some change, such as the hydrolysis of a fragment that masks an active enzyme, to become active
+Synonyms: proenzyme
+
+>>> zootoxin
+
+(n) any toxin that comes from an animal
+
+>>> zinnwaldite
+
+(n) a mica containing iron and lithium
+
+>>> zircon
+
+(n) a common mineral occurring in small crystals
+
+>>> zirconium oxide
+
+(n) a white crystalline oxide
+Synonyms: zirconia
+
+>>> zirconia
+
+(n) a white crystalline oxide
+Synonyms: zirconium oxide
+
+>>> zeolite
+
+(n) any of a family of glassy minerals analogous to feldspar containing hydrated aluminum silicates of calcium or sodium or potassium
+
+>>> zero hour
+
+(n) the time set for the start of an action or operation
+
+>>> zonk out
+
+(v) to fall asleep fast, as when one is extremely tired
+
+(v) to lose consciousness due to a sudden trauma
+Synonyms: pass out, black out
+
+>>> zero in
+
+(v) adjust, as by firing under test conditions, the zero of a gun
+Synonyms: zero
+
+(v) direct onto a point or target, especially by automatic navigational aids
+Synonyms: range in, home in
+
+>>> zip up
+
+(v) to close with a zipper
+Synonyms: zip
+
+>>> zip by
+
+(v) to move by very quickly
+Synonyms: fly by
+
+>>> zoom along
+
+(v) to move along very quickly
+Synonyms: zoom
+
+>>> zoom in
+
+(v) to examine closely
+
+>>> zax
+
+(n) a tool used in roofing, a slate knife
+

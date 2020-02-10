@@ -1,0 +1,1379 @@
+>>> yet
+
+(adv) to a greater degree or extent
+Synonyms: even
+
+(adv) despite anything to the contrary, usually following a concession
+Synonyms: however
+
+(adv) up to the present time
+
+(adv) used in negative statement to describe a situation that has existed up to this point or up to the present time
+Synonyms: so far
+
+(adv) used after a superlative
+Synonyms: so far
+
+(adv) within an indefinite time or at an unspecified future time
+Synonyms: in time
+
+>>> yearly
+
+(adv) without missing a year
+Synonyms: annually
+
+(adj) occurring or payable every year
+Synonyms: annual
+
+(n) a reference book that is published regularly once every year
+Synonyms: annual
+
+>>> yonder
+
+(adv) at or in an indicated (usually distant) place (`yon' is archaic and dialectal)
+
+(adj) distant but within sight (`yon' is dialectal)
+Synonyms: yon
+
+>>> yon
+
+(adj) distant but within sight (`yon' is dialectal)
+Synonyms: yonder
+
+>>> you bet
+
+(adv) an expression of emphatic agreement
+Synonyms: and how
+
+>>> you said it
+
+(adv) an expression of emphatic agreement
+Synonyms: and how
+
+>>> yieldingly
+
+(adv) in an obedient manner
+Synonyms: obediently
+
+>>> yearningly
+
+(adv) in a yearning manner
+Synonyms: longingly
+
+>>> yea
+
+(adv) not only so, but
+Synonyms: yeah
+
+(n) an affirmative
+Synonyms: yes
+
+>>> yeah
+
+(adv) casual way of answering yes
+Synonyms: yea
+
+>>> youthfully
+
+(adv) in a youthful manner
+
+>>> yesterday
+
+(adv) on the day preceding today
+
+(adv) in the recent past
+Synonyms: recently
+
+(n) the day immediately before today
+
+(n) the recent past
+
+>>> yellow
+
+(adj) typical of tabloids
+Synonyms: scandalmongering
+
+(adj) easily frightened
+Synonyms: chicken
+
+(adj) of the color intermediate between green and orange in the color spectrum
+Synonyms: xanthous
+
+(adj) affected by jaundice which causes yellowing of skin etc
+Synonyms: jaundiced, icteric
+
+(adj) cowardly or treacherous
+
+(adj) changed to a yellowish color by age
+Synonyms: yellowed
+
+(n) yellow color or pigment
+Synonyms: yellowness
+
+(v) turn yellow
+
+>>> yellow-bellied
+
+(adj) easily frightened
+Synonyms: chicken
+
+>>> yellowish
+
+(adj) of the color intermediate between green and orange in the color spectrum
+
+>>> yellow-beige
+
+(adj) of beige tinged with yellow
+
+>>> yellow-green
+
+(adj) of a color midway between yellow and green
+
+>>> yellow-orange
+
+(adj) of orange tinged with yellow
+
+>>> yellow-grey
+
+(adj) of grey tinged with yellow
+
+>>> yellow-white
+
+(adj) of a white tinged with yellow
+
+>>> yokel-like
+
+(adj) stupid and ignorant like proverbial rural inhabitants
+
+>>> yarn-spinning
+
+(adj) inclined to tell long and involved stories, often of incredible happenings
+
+>>> yeasty
+
+(adj) exuberantly creative
+
+(adj) marked by spirited enjoyment
+Synonyms: barmy, zestful, zesty
+
+(adj) of or resembling or containing yeast
+Synonyms: yeastlike
+
+>>> young
+
+(adj) (of crops) harvested at an early stage of development
+Synonyms: new
+
+(adj) not tried or tested by experience
+Synonyms: untested, untried, unseasoned
+
+(adj) being in its early stage
+
+(adj) of living things, especially persons, in an early period of life or development or growth
+Synonyms: immature
+
+(adj) suggestive of youth
+Synonyms: youthful
+
+(n) any immature animal
+Synonyms: offspring
+
+(n) young people collectively
+Synonyms: youth
+
+>>> year-end
+
+(adj) taking place at the close of a fiscal year
+
+(n) the end of a calendar year
+
+>>> yielding
+
+(adj) tending to give in or surrender or agree
+
+(adj) lacking stiffness and giving way to pressure
+
+(adj) inclined to yield to argument or influence or control
+
+(n) the act of conceding or yielding
+Synonyms: concession, conceding
+
+(n) a verbal act of admitting defeat
+Synonyms: surrender
+
+>>> yearlong
+
+(adj) lasting through a year
+
+>>> yelled
+
+(adj) in a vehement outcry
+Synonyms: shouted
+
+>>> young-bearing
+
+(adj) capable of producing eggs and bearing offspring
+Synonyms: egg-producing
+
+>>> year-round
+
+(adj) operating or continuing throughout the year
+
+>>> Yankee
+
+(adj) relating to an inhabitant of a northern state in the United States, especially a Union soldier during the Civil War, typically used by inhabitants of the southern United States as a pejorative term
+
+(n) an inhabitant of a northern state in the United States, especially a Union soldier during the Civil War, typically used by inhabitants of the southern United States as a pejorative term
+
+>>> yucky
+
+(adj) unappealing or unappetizing
+Synonyms: repellent
+
+>>> yellowed
+
+(adj) changed to a yellowish color by age
+Synonyms: yellow
+
+>>> youngish
+
+(adj) somewhat young
+
+>>> youthful
+
+(adj) suggestive of youth
+Synonyms: young
+
+>>> yawning
+
+(adj) showing lack of attention or boredom
+Synonyms: drowsy
+
+(adj) gaping open as if threatening to engulf someone or something
+
+(adj) with the mouth wide open indicating boredom or sleepiness
+
+(n) an involuntary intake of breath through a wide open mouth
+Synonyms: yawn
+
+>>> yokelish
+
+(adj) relating to persons that are lacking in refinement or grace
+Synonyms: rude
+
+>>> younger
+
+(adj) used of the younger of two persons of the same name especially used to distinguish a son from his father
+Synonyms: jr.
+
+>>> yummy
+
+(adj) extremely pleasing to the sense of taste
+Synonyms: delectable
+
+>>> yearned-for
+
+(adj) greatly desired
+Synonyms: coveted
+
+>>> Yugoslavian
+
+(adj) of or relating to or characteristic of the former country of Yugoslavia or its people or languages
+Synonyms: Yugoslav
+
+>>> Yugoslav
+
+(adj) of, relating to, or characteristic of the former country of Yugoslavia, its people, or its languages
+Synonyms: Yugoslavian
+
+>>> yogistic
+
+(adj) of or relating to yoga
+Synonyms: yogic
+
+>>> yogic
+
+(adj) of or relating to yoga
+Synonyms: yogistic
+
+>>> Yeatsian
+
+(adj) in the manner of William Butler Yeats
+
+>>> yeastlike
+
+(adj) of or resembling or containing yeast
+Synonyms: yeasty
+
+>>> Yuman
+
+(adj) of or relating to the language or culture of the Yuma people
+
+(n) a Native American tribal person living in southern California or western Arizona
+
+>>> Yemeni
+
+(adj) of or relating to or characteristic of Yemen or its inhabitants
+
+>>> yachting
+
+(n) water travel for pleasure
+Synonyms: boating
+
+>>> yoga
+
+(n) a system of exercises, focusing on breathing techniques, originally practiced as part of the Hindu religion, to promote control of the body and mind
+
+>>> youth movement
+
+(n) political or religious or social reform movement or agitation consisting chiefly of young people
+Synonyms: youth crusade
+
+>>> youth crusade
+
+(n) political, religious, social reform movement or agitation consisting chiefly of young people
+Synonyms: youth movement
+
+>>> yawn
+
+(n) an involuntary intake of breath through a wide open mouth
+Synonyms: oscitance, oscitancy, yawning
+
+(v) utter a yawn, as from lack of oxygen or when one is tired
+
+(v) be wide open
+Synonyms: gape, yaw
+
+>>> yield
+
+(n) production of a certain amount
+Synonyms: output
+
+(n) an amount of a product
+Synonyms: fruit
+
+(n) the income or profit arising from such transactions as the sale of land or other property
+Synonyms: return
+
+(n) the quantity of something (as a commodity) that is created (usually within a given period of time)
+Synonyms: production
+
+(v) end resistance, as under pressure or force
+Synonyms: give way
+
+(v) consent reluctantly
+Synonyms: give in, succumb, knuckle under, buckle under
+
+(v) be willing to concede
+Synonyms: grant
+
+(v) cease opposition
+
+(v) be flexible under stress of physical force
+Synonyms: give
+
+(v) give or supply
+Synonyms: return
+
+(v) cause to happen or be responsible for
+Synonyms: give
+
+(v) move in order to make room for someone for something
+Synonyms: give, ease up, give way, move over
+
+(v) bring in
+Synonyms: bear, pay
+
+(v) give over
+Synonyms: grant
+
+(v) be the cause or source of
+Synonyms: give, afford
+
+(v) be fatally overwhelmed
+Synonyms: succumb
+
+(v) give in, as to influence or pressure
+Synonyms: soften, relent
+
+>>> yard sale
+
+(n) an outdoor sale of used personal or household items held on the seller's premises
+Synonyms: garage sale
+
+>>> yodeling
+
+(n) singing by changing back and forth between the chest voice and a falsetto
+
+>>> yolk
+
+(n) nutritive material of an ovum stored for the nutrition of an embryo (especially the yellow mass of a bird or reptile egg)
+
+(n) the yellow spherical part of an egg that is surrounded by the albumen
+Synonyms: egg yolk
+
+>>> yolk sac
+
+(n) membranous structure enclosing the yolk of eggs in birds, reptiles, marsupials, and some fishes
+
+(n) membranous structure that functions as the circulatory system in mammalian embryos until the heart becomes functional
+Synonyms: vitelline sac, umbilical vesicle
+
+>>> yellowhammer
+
+(n) European bunting the male being bright yellow
+
+(n) large flicker of eastern North America with a red neck and yellow undersurface to wings and tail
+
+>>> yellowbird
+
+(n) American finch whose male has yellow body plumage in summer
+Synonyms: goldfinch
+
+(n) yellow-throated American wood warbler
+Synonyms: golden warbler
+
+>>> yearling
+
+(n) an animal in its second year
+
+(n) a racehorse considered one year old until the second Jan. 1 following its birth
+
+(n) a young child
+Synonyms: kiddy, bambino
+
+>>> yellow jacket
+
+(n) small yellow-marked social wasp commonly nesting in the ground
+
+(n) a barbiturate (trade name Nembutal) used as a sedative and hypnotic and antispasmodic
+Synonyms: pentobarbital sodium
+
+>>> yellowbelly marmot
+
+(n) heavy-bodied yellowish-brown marmot of rocky areas of western North America
+Synonyms: rockchuck
+
+>>> yak
+
+(n) large long-haired wild ox of Tibet often domesticated
+
+(n) noisy talk
+Synonyms: cackle, yack, yakety-yak, chatter
+
+(v) talk profusely
+Synonyms: gab
+
+>>> yellowtail
+
+(n) game fish of southern California and Mexico having a yellow tail fin
+
+(n) superior food fish of the tropical Atlantic and Caribbean with broad yellow stripe along the sides and on the tail
+
+>>> yellow jack
+
+(n) fish of western Atlantic and Gulf of Mexico
+Synonyms: crevalle jack
+
+(n) yellow flag hoist on a ship in quarantine
+
+(n) caused by a flavivirus transmitted by a mosquito
+Synonyms: yellow fever, black vomit
+
+>>> yellowfin
+
+(n) may reach 400 pounds
+Synonyms: yellowfin tuna
+
+>>> yellowfin tuna
+
+(n) a type of tuna fish, common as seafood in several cuisines; one fish can weigh as much as 400 pounds
+Synonyms: yellowfin
+
+>>> youth hostel
+
+(n) inexpensive supervised lodging for travelers, particularly students and young people
+Synonyms: hostel
+
+>>> yarn
+
+(n) a fine cord of twisted fibers (of cotton or silk or wool or nylon etc.) used in sewing and weaving
+Synonyms: thread
+
+(n) the act of giving an account describing incidents or a course of events
+Synonyms: narration, recital
+
+(v) tell or spin a yarn
+
+>>> yacht
+
+(n) an expensive vessel propelled by sail or power and used for cruising or racing
+Synonyms: racing yacht
+
+(v) travel in a yacht
+
+>>> yagi
+
+(n) a sharply directional antenna
+
+>>> yard
+
+(n) an enclosure for animals (as chicken or livestock)
+
+(n) a long horizontal spar tapered at the end and used to support and spread a square sail or lateen
+
+(n) the enclosed land around a house or other building
+Synonyms: grounds, curtilage
+
+(n) an area having a network of railway tracks and sidings for storage and maintenance of cars and engines
+Synonyms: railway yard, railyard
+
+(n) a tract of land enclosed for particular activities (sometimes paved and usually associated with buildings)
+
+(n) a tract of land where logs are accumulated
+
+(n) a unit of volume, as for sand or gravel
+Synonyms: cubic yard
+
+(n) a unit of length equal to 3 feet
+Synonyms: pace
+
+(n) the cardinal number that is the product of 10 and 100
+Synonyms: grand
+
+>>> yardarm
+
+(n) either end of the yard of a square-rigged ship
+
+>>> yarder
+
+(n) a winch (or system of winches) powered by an engine and used to haul logs from a stump to a landing or to a skid road
+Synonyms: yard donkey
+
+(n) the height or length of something in yards, used only in combinations
+
+>>> yard donkey
+
+(n) a winch, or system of winches, powered by an engine and used to haul logs from a stump to a landing or to a skid road
+Synonyms: yarder
+
+>>> yard goods
+
+(n) merchandise in the form of fabrics sold by the yard
+Synonyms: piece goods
+
+>>> yard marker
+
+(n) in American football, a marker indicating the current position of the play, measured as yards from the center of the field
+
+>>> yardstick
+
+(n) a ruler or tape that is three feet long
+Synonyms: yard measure
+
+(n) a measure or standard used for comparison
+
+>>> yard measure
+
+(n) a ruler or tape that is three feet long
+Synonyms: yardstick
+
+>>> yarmulke
+
+(n) a skullcap worn by Jews, especially at prayer
+Synonyms: 
+
+>>> yarmulka
+
+(n) a skullcap worn by Jews, especially at prayer
+Synonyms: 
+
+>>> yarmelke
+
+(n) a skullcap worn by Jews, especially at prayer
+Synonyms: 
+
+>>> yashmak
+
+(n) the face veil worn by Muslim women
+Synonyms: yashmac
+
+>>> yashmac
+
+(n) the face veil worn by Muslim women in Turkish
+Synonyms: yashmak
+
+>>> yataghan
+
+(n) a long Turkish knife with a curved blade having a single edge
+
+>>> yawl
+
+(n) a sailing vessel with two masts
+Synonyms: dandy
+
+(n) a ship's small boat (usually rowed by 4 or 6 oars)
+
+(v) emit long loud cries
+Synonyms: roar, howl, wail, ululate, yaup
+
+>>> yoke
+
+(n) stable gear that joins two draft animals at the neck so they can work together as a team
+
+(n) fabric comprising a fitted part at the top of a garment
+
+(n) a connection, like a clamp or vise, between two things so they move together
+Synonyms: coupling
+
+(n) support consisting of a wooden frame across the shoulders that enables a person to carry buckets hanging from each end
+
+(n) a pair of draft animals joined by a yoke
+
+(n) two items of the same kind
+Synonyms: span
+
+(n) an oppressive power
+
+(v) to put a yoke on or join with a yoke
+
+(v) to link with or as with a yoke
+Synonyms: link
+
+(v) to become joined or linked together
+
+(n) the control mechanism for an aircraft
+
+>>> yo-yo
+
+(n) a toy consisting of a spool that is reeled up and down on a string by motions of the hand
+
+(v) to play with a yo-yo
+
+>>> yurt
+
+(n) a circular domed dwelling that is portable and self-supporting
+
+>>> youngness
+
+(n) the opposite of oldness
+
+>>> youth
+
+(n) the freshness and vitality characteristic of a young person
+Synonyms: youthfulness, juvenility
+
+(n) young people collectively
+Synonyms: young
+
+(n) a young person (especially a young man or boy)
+Synonyms: spring chicken
+
+(n) early maturity
+
+(n) the time of life between childhood and maturity
+
+(n) an early period of development
+Synonyms: early days
+
+>>> youthfulness
+
+(n) the freshness and vitality characteristic of a young person
+Synonyms: youth
+
+>>> yellowish pink
+
+(n) a shade of pink tinged with yellow
+Synonyms: apricot, peach, salmon pink
+
+>>> yellowness
+
+(n) yellow color or pigment
+Synonyms: yellow
+
+(n) cowardlyness
+
+>>> yardage
+
+(n) distance measured in the aggregate number of yards
+
+>>> yellow marrow
+
+(n) bone marrow that is yellow with fat
+
+>>> yap
+
+(n) informal terms for the mouth
+Synonyms: trap
+
+(v) bark in a high-pitched tone
+Synonyms: yip, yelp
+
+>>> yellow bile
+
+(n) a humor that was once believed to be secreted by the liver and to cause irritability and anger
+Synonyms: choler
+
+>>> yellow spot
+
+(n) a small yellowish central area of the retina that is rich in cones and that mediates clear detailed vision
+Synonyms: macula
+
+>>> yang
+
+(n) the bright, positive, masculine principle in Chinese dualistic cosmology
+
+>>> yin
+
+(n) the dark, negative, feminine principle in Chinese dualistic cosmology
+
+>>> y-axis
+
+(n) the vertical axis in a plane coordinate system
+
+>>> yellow journalism
+
+(n) a type of sensationalist writing that is used to sell more copies of a certain print by means of catching one's attention with a flashy or shocking title
+Synonyms: tab
+
+>>> yearbook
+
+(n) a book published annually by a school usually containing photographs of faculty and students
+
+>>> yellow-dog contract
+
+(n) a now illegal labor contract whereby the employee agrees not to join a trade union
+
+>>> yellow light
+
+(n) the signal to proceed with caution
+
+>>> yodh
+
+(n) the 10th letter of the Hebrew alphabet
+
+>>> y
+
+(n) the 25th letter of the Roman alphabet
+Synonyms: wye
+
+>>> yell
+
+(n) a loud utterance
+Synonyms: call
+
+(n) a loud utterance of emotion, especially when inarticulate
+Synonyms: cry
+
+(v) to utter or declare in a very loud voice
+Synonyms: scream
+
+(v) to utter a sudden loud cry
+Synonyms: call
+
+>>> yowl
+
+(n) a very loud utterance (like the sound of an animal)
+Synonyms: roaring
+
+(v) utter shrieks, as of cats
+Synonyms: caterwaul
+
+(v) cry loudly, as of animals
+Synonyms: howl, yammer, wrawl
+
+>>> yelling
+
+(n) uttering a loud inarticulate cry as of pain or excitement
+Synonyms: shouting
+
+>>> yodel
+
+(n) a songlike cry in which the voice fluctuates rapidly between the normal voice and falsetto
+
+(v) to sing by changing register
+Synonyms: warble
+
+>>> yack
+
+(n) noisy talk
+Synonyms: yak
+
+(v) talk incessantly and tiresomely
+Synonyms: jaw
+
+>>> yakety-yak
+
+(n) noisy talk
+Synonyms: yak
+
+>>> yes-no question
+
+(n) a question that can be answered by yes or no
+
+>>> yes
+
+(n) an affirmative
+Synonyms: yea
+
+>>> yellow pages
+
+(n) a telephone directory or section of a directory, usually printed on yellow paper, where business products and services are listed alphabetically by field along with classified advertising
+
+>>> yip
+
+(n) a sharp high-pitched cry (especially by a dog)
+Synonyms: yelp, yelping
+
+(v) bark in a high-pitched tone
+Synonyms: yap
+
+>>> yelp
+
+(n) a sharp, high-pitched cry, especially by a dog
+Synonyms: yip
+
+(v) to bark in a high-pitched tone
+Synonyms: yap
+
+>>> yelping
+
+(n) a sharp high-pitched cry, especially by a dog
+Synonyms: yip
+
+>>> yaw
+
+(v) to rotate along the vertical axis in the horizontal plane
+
+(n) a direction of rotation along the vertical axis in the horizontal plane
+
+(n) an erratic deflection from an intended course
+Synonyms: swerve
+
+(v) to swerve off course momentarily
+
+(v) to deviate erratically from a set course
+
+(v) to be wide open
+Synonyms: yawn
+
+>>> yearning
+
+(n) prolonged unfulfilled desire or need
+Synonyms: hungriness
+
+>>> yen
+
+(n) a yearning for something or to do something
+Synonyms: hankering
+
+(n) the basic unit of money in Japan
+
+(v) have a desire for something or someone who is not present
+Synonyms: pine, ache, languish, yearn
+
+>>> Yorkshire pudding
+
+(n) light puffy bread made of a puff batter and traditionally baked in the pan with roast beef
+
+>>> yam
+
+(n) edible tuberous root of various yam plants of the genus Dioscorea grown in the tropics world-wide for food
+
+(n) sweet potato with deep orange flesh that remains moist when baked
+
+(n) any of a number of tropical vines of the genus Dioscorea many having edible tuberous roots
+
+(n) edible tuber of any of several yams
+
+>>> yogurt
+
+(n) a custard-like food made from curdled milk
+
+>>> yoghurt
+
+(n) a custard-like food made from curdled milk
+
+>>> yoghourt
+
+(n) a custard-like food made from curdled milk
+
+>>> yeomanry
+
+(n) a British volunteer cavalry force organized in 1761 for home defense later incorporated into the Territorial Army
+
+(n) class of small freeholders who cultivated their own land
+
+>>> yacht club
+
+(n) club that promotes and supports yachting and boating
+Synonyms: boat club
+
+>>> yakuza
+
+(n) organized crime in Japan
+
+(n) a Japanese gangster
+
+>>> year
+
+(n) a body of students who graduate together
+Synonyms: class
+
+(n) the period of time that it takes for a planet (as, e.g., Earth or Mars) to make a complete revolution around the sun
+
+(n) a period of time containing 365 days
+Synonyms: twelvemonth
+
+(n) a period of time occupying a regular part of a calendar year that is used for some particular activity
+
+>>> yeshiva
+
+(n) an academy for the advanced study of Jewish texts (primarily the Talmud)
+Synonyms: yeshivah
+
+>>> yeshivah
+
+(n) an academy for the advanced study of Jewish texts (primarily the Talmud)
+Synonyms: yeshiva
+
+>>> yard line
+
+(n) in American football, the marker used to reference the progress in a play
+
+>>> yeti
+
+(n) a large hairy humanoid creature said to live in the Himalayas
+Synonyms: abominable snowman
+
+>>> yid
+
+(n) a fan of the Tottenham Hotspur Football Club
+
+(n) offensive term for a Jew
+Synonyms: sheeny
+
+>>> young man
+
+(n) a man who is the lover of a girl or young woman
+Synonyms: boyfriend
+
+(n) a teenager or a young adult male
+Synonyms: young buck
+
+>>> yob
+
+(n) a cruel and brutal fellow
+Synonyms: tough
+
+>>> yobo
+
+(n) a cruel and brutal fellow
+Synonyms: tough
+
+>>> yobbo
+
+(n) a cruel and brutal fellow
+Synonyms: tough
+
+>>> youngster
+
+(n) a young person
+Synonyms: nestling
+
+>>> yard bird
+
+(n) a person serving a sentence in a jail or prison
+Synonyms: con
+
+(n) a military recruit who is assigned menial tasks
+Synonyms: yardbird
+
+>>> yardbird
+
+(n) a person serving a sentence in a jail or prison
+Synonyms: con
+
+(n) a military recruit who is assigned menial tasks
+Synonyms: yard bird
+
+>>> yes-man
+
+(n) a person of unquestioning obedience
+Synonyms: stooge
+
+>>> yes man
+
+(n) a person of unquestioning obedience
+Synonyms: stooge
+
+>>> yearner
+
+(n) a person with a strong desire for something
+Synonyms: longer
+
+>>> yeller
+
+(n) someone who communicates vocally in a very loud voice
+Synonyms: screamer
+
+>>> yielder
+
+(n) a person who yields or surrenders
+Synonyms: surrenderer
+
+>>> young buck
+
+(n) a teenager or a young adult male
+Synonyms: young man
+
+>>> younker
+
+(n) a young person, especially a young man or boy
+Synonyms: spring chicken
+
+>>> young Turk
+
+(n) a young radical who agitates for reform
+
+>>> yuppie
+
+(n) a young upwardly mobile professional individual
+
+>>> yachtsman
+
+(n) a person who owns or sails a yacht
+
+>>> yanker
+
+(n) someone who gives a strong sudden pull
+Synonyms: jerker
+
+>>> yardie
+
+(n) member of an international gang of Jamaican criminals who sell drugs and violence
+
+>>> yardman
+
+(n) a laborer hired to do outdoor work
+
+(n) worker in a railway yard
+
+>>> yardmaster
+
+(n) a railroad employer who is in charge of a railway yard
+Synonyms: trainmaster, train dispatcher
+
+>>> yawner
+
+(n) a person who yawns
+
+>>> yenta
+
+(n) from Yiddish, a woman who talks too much
+
+(n) from Yiddish, a vulgar shrew
+
+>>> yeoman
+
+(n) in former times was free and cultivated his own land
+
+(n) officer in the (ceremonial) bodyguard of the British monarch
+Synonyms: beefeater
+
+>>> yodeller
+
+(n) a singer who changes register rapidly, popular in Swiss folk songs
+
+>>> yogi
+
+(n) one who practices yoga and has achieved a high level of spiritual insight
+
+>>> yokel
+
+(n) a person who is not very intelligent or interested in culture
+Synonyms: hick
+
+>>> yahoo
+
+(n) a person who acts recklessly or dangerously
+
+(n) a person who is not very intelligent or interested in culture
+Synonyms: hick
+
+>>> yellow cypress
+
+(n) tall evergreen of the Pacific coast of North America often cultivated for ornament
+
+>>> yellowwood
+
+(n) any of various trees having yellowish wood or yielding a yellow extract
+
+(n) the yellow wood of any of various yellowwood trees
+
+>>> yacca
+
+(n) West Indian evergreen with medium to long leaves
+
+>>> yew
+
+(n) any of numerous evergreen trees or shrubs having red cup-shaped berries and flattened needlelike leaves
+
+>>> yellow poplar
+
+(n) tall North American deciduous timber tree having large tulip-shaped greenish yellow flowers and conelike fruit
+Synonyms: tulip tree
+
+(n) light easily worked wood of a tulip tree
+Synonyms: tulipwood, true tulipwood, whitewood, white poplar
+
+>>> yellow root
+
+(n) a perennial herb found in the northeastern United States, identifiable by a thick, knotted yellow rootstock and large rounded leaves
+Synonyms: goldenseal
+
+>>> yautia
+
+(n) tropical American aroid having edible tubers that are cooked and eaten like yams or potatoes
+Synonyms: tannia, spoonflower, malanga
+
+>>> yellow chamomile
+
+(n) Eurasian perennial herb with hairy divided leaves and yellow flowers
+Synonyms: golden marguerite, dyers' chamomile
+
+>>> yarrow
+
+(n) ubiquitous strong-scented mat-forming Eurasian herb of wasteland, hedgerow or pasture having narrow serrate leaves and small usually white florets
+Synonyms: milfoil
+
+>>> yellow lady-slipper
+
+(n) maroon to purple-brown orchid with yellow lip
+
+>>> yellow loosestrife
+
+(n) frequently considered a weed
+Synonyms: garden loosestrife
+
+>>> yardgrass
+
+(n) coarse annual grass having fingerlike spikes of flowers
+Synonyms: wire grass, goose grass
+
+>>> yellow bristlegrass
+
+(n) common weedy and bristly grass found in nearly all temperate areas
+Synonyms: glaucous bristlegrass
+
+>>> yellow iris
+
+(n) common yellow-flowered iris of Europe and North Africa, naturalized in United States and often cultivated
+
+>>> yellow globe lily
+
+(n) globe lily having open branched clusters of clear yellow egg-shaped flowers
+Synonyms: golden fairy lantern
+
+>>> yellow clintonia
+
+(n) common woodland herb of temperate North America having yellow nodding flowers and small round blue fruits
+Synonyms: heal all
+
+>>> yucca
+
+(n) any of several evergreen plants of the genus Yucca, typically characterized by tall, stout stems and a terminal cluster of white flowers
+
+>>> yellow jasmine
+
+(n) poisonous woody evergreen vine of southeastern United States having fragrant yellow funnel-shaped flowers
+Synonyms: evening trumpet flower
+
+>>> yellow cleavers
+
+(n) common yellow-flowered perennial bedstraw
+
+>>> yellow foxglove
+
+(n) European yellow-flowered foxglove
+Synonyms: straw foxglove
+
+>>> yeast
+
+(n) any of various single-celled fungi that reproduce asexually by budding or division
+
+(n) a commercial leavening agent containing yeast cells
+Synonyms: barm
+
+>>> yottabyte
+
+(n) a unit of information equal to 1024 zebibytes or 2^80 bytes
+Synonyms: yobibyte
+
+(n) a unit of information equal to 1000 zettabytes or 10^24 bytes
+
+>>> yobibyte
+
+(n) a unit of information equal to 1024 zebibytes or 2^80 bytes
+Synonyms: yottabyte
+
+>>> yottabit
+
+(n) a unit of information equal to 1000 zettabits or 10^24 bits
+
+>>> yobibit
+
+(n) a unit of information equal to 1024 zebibits or 2^80 bits
+
+>>> yuan
+
+(n) the basic unit of money in China
+
+>>> yaws
+
+(n) an infectious tropical disease resembling syphilis in its early stages
+Synonyms: frambesia, framboesia
+
+>>> yellow fever
+
+(n) caused by a flavivirus transmitted by a mosquito
+Synonyms: yellow jack
+
+>>> yellow-blue dichromacy
+
+(n) confusion of yellow and blue
+
+>>> yellow-blindness
+
+(n) a form of dichromacy characterized by lowered sensitivity to yellow light
+Synonyms: tetartanopia
+
+>>> yatobyo
+
+(n) a highly infectious disease of rodents, especially rabbits and squirrels, and sometimes transmitted to humans by ticks or flies or by handling infected animals
+Synonyms: tularemia
+
+>>> yips
+
+(n) nervous tension that causes an athlete to fail, especially causing golfers to miss short putts
+
+>>> ylem
+
+(n) in cosmology, the original matter that, according to the big bang theory, existed before the formation of the chemical elements
+
+>>> yellow peril
+
+(n) the threat to Western civilization said to arise from the power of Asiatic peoples
+
+>>> ytterbium
+
+(n) a soft silvery metallic element
+
+>>> yttrium
+
+(n) a silvery metallic element that is common in rare-earth minerals
+
+>>> yellow metal
+
+(n) an alpha-beta brass that is about 60% copper and 40% iron
+Synonyms: alpha-beta brass
+
+>>> yellow ocher
+
+(n) pigment consisting of a limonite mixed with clay and silica
+
+>>> yesteryear
+
+(n) the time that has elapsed
+Synonyms: past
+
+>>> yore
+
+(n) time long past
+
+>>> yellowcake
+
+(n) an impure mixture of uranium oxides obtained during the processing of uranium ore
+
+>>> year dot
+
+(n) as long ago as anyone can remember
+
+>>> yarn-dye
+
+(v) to dye fabric before it is spun
+
+>>> yammer
+
+(v) to complain whiningly
+Synonyms: grizzle
+
+(v) to cry loudly, as of animals
+Synonyms: yowl
+
+>>> yawp
+
+(v) to complain whiningly
+Synonyms: grizzle
+
+(v) to make a raucous noise
+Synonyms: bawl
+
+>>> yack away
+
+(v) to talk incessantly and tiresomely
+Synonyms: jaw
+
+>>> yap away
+
+(v) to talk incessantly and tiresomely
+Synonyms: jaw
+
+>>> yaup
+
+(v) to emit long loud cries
+Synonyms: yawl
+
+>>> yank
+
+(v) to pull, or move with a sudden movement
+Synonyms: jerk
+
+(n) a quick, sudden pulling movement
+
+(n) short for yankee i.e. an American, often pejorative 
+
+>>> yearn
+
+(v) to have affection for
+
+(v) to have a desire for something or someone who is not present
+Synonyms: yen
+
+(v) to desire strongly or persistently
+Synonyms: long
+
+>>> yield up
+
+(v) to surrender, as a result of pressure or force
+
+>>> yo
+
+(ij) a greeting like 'hi'
+
+>>> yolo
+
+(phrase) shortened form of "you only live once"
+
+>>> Yottasecond
+
+(n) a period of time equal to one septillion seconds, or 10^24
+
+>>> y'all
+
+(pronoun) second person plural pronoun, contraction of "you all"
+
+>>> yall
+
+(pronoun) second person plural pronoun, contraction of "you all"
+

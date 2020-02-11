@@ -114,7 +114,14 @@ function shell {
 		echo -n "$prompt"
 		IFS= read key
 		if [[ "$key" == "exit"* || "$key" == "quit"* ]] ; then return ; fi
-		if [[ `__listfunctions` != *`echo "$key" | cut -d ' ' -f 1`* ]] ; then
+		functions=( `__listfunctions` )
+		found=0
+		for func in "${functions[@]}" ; do
+			if [[ "$func" == "`echo "$key" | cut -d ' ' -f 1`" ]] ; then
+				found=1
+			fi
+		done
+		if [[ $found -eq 0 ]] ; then
 			__errortext "Unknown command '`echo $key | cut -d ' ' -f 1`'"
 			continue
 		fi

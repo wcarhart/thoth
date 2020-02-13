@@ -11,7 +11,15 @@ if [[ -f .thothdict ]] ; then
 	dict="$(cat .thothdict)"
 	if [[ ! -d "$dict" ]] ; then dict= ; fi
 else
-	if [[ -d dict/ ]] ; then dict="${self}/dict/" ; echo "$dict" > .thothdict ; fi
+	if [[ -d dict/ ]] ; then
+		dict="${self}/dict/"
+		echo "$dict" > .thothdict
+	elif [[ -d /usr/local/etc/dict ]] ; then
+		dict="/usr/local/etc/dict/"
+		echo "$dict" > .thothdict
+	else
+		dict=
+	fi
 fi
 
 # ============ AVAILABLE CLI FUNCTIONS ============ #

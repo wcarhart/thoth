@@ -4,9 +4,9 @@
 <p align="center">Helpful English diction tools for the command line</p>
 
 ## Quick examples
-Look up definitions for more than 150,000 English words
+Look up definitions for more than 150,000 English words:
 ```
-$ thoth define hello
+$ thoth define resolute
 resolute
 
 (adj) characterized by quickness and firmness
@@ -14,7 +14,7 @@ resolute
 (adj) firm in purpose or belief
 ```
 
-Find synonyms for words
+Find synonyms for words:
 ```
 $ thoth synonym hello
 hello
@@ -22,7 +22,7 @@ hello
 Synonyms: hullo, hi, howdy, how-do-you-do
 ```
 
-Install verbose dictionaries and for even more functionality
+Install verbose dictionaries and for even more functionality:
 ```
 $ thoth install ~/a_huge_dictionary/dict/
 $ thoth lookup gripe

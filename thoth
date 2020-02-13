@@ -5,7 +5,7 @@
 
 # ============ STARTUP ============ #
 self="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
-version=0.0.0
+version=1
 description="Helpful English diction tools for the command line"
 if [[ -f .thothdict ]] ; then
 	dict="$(cat .thothdict)"
@@ -555,6 +555,14 @@ function --help {
 
 function -h {
 	help "$@"
+}
+
+function --version {
+	version "$@"
+}
+
+function -v {
+	version "$@"
 }
 
 # ============ RUN LOGIC ============ #

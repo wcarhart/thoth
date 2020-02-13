@@ -7,16 +7,16 @@
 self="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 version=1
 description="Helpful English diction tools for the command line"
-if [[ -f .thothdict ]] ; then
-	dict="$(cat .thothdict)"
+if [[ -f /usr/local/etc/.thothdict ]] ; then
+	dict="$(cat /usr/local/etc/.thothdict)"
 	if [[ ! -d "$dict" ]] ; then dict= ; fi
 else
 	if [[ -d dict/ ]] ; then
 		dict="${self}/dict/"
-		echo "$dict" > .thothdict
+		echo "$dict" > /usr/local/etc/.thothdict
 	elif [[ -d /usr/local/etc/dict ]] ; then
 		dict="/usr/local/etc/dict/"
-		echo "$dict" > .thothdict
+		echo "$dict" > /usr/local/etc/.thothdict
 	else
 		dict=
 	fi
@@ -403,7 +403,7 @@ function install {
 	done
 
 	dict="$dictpath"
-	echo "$dict" > .thothdict
+	echo "$dict" > /usr/local/etc/.thothdict
 }
 
 function reset {
@@ -411,7 +411,7 @@ function reset {
 		__helptext ">> thoth reset\nReset thoth's dictionary to the default dictionary."
 		return
 	fi
-	if [[ -f .thothdict ]] ; then rm -rf .thothdict ; fi
+	if [[ -f /usr/local/etc/.thothdict ]] ; then rm -rf /usr/local/etc/.thothdict ; fi
 }
 
 function add {

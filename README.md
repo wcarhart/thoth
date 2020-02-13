@@ -509,4 +509,4 @@ The default dictionary shipped with `thoth` comes from [WordNet](https://wordnet
 There may be other dictionaries in the future, but for now the default dictionary is fairly limited, unfortunately. 
 
 ## Nomenclature
-You may ask, why the name `thoth`? `thoth` is the [Egyptian god of writing, magic, wisdom](https://en.wikipedia.org/wiki/Thoth). He is often depicted as a man with the head of an ibis or a baboon, animals sacred to himm, and is said to maintain the universe. 
+You may ask, why the name `thoth`? `thoth` is the [Egyptian god of writing, magic, wisdom](https://en.wikipedia.org/wiki/Thoth). He is often depicted as a man with the head of an ibis or a baboon, animals sacred to him, and is said to maintain the universe. 

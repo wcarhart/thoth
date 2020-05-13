@@ -3,6 +3,10 @@
 # thoth - https://en.wikipedia.org/wiki/Thoth
 # helpful English diction tools for the command line
 
+source koi
+koiname=thoth
+koidescription='Helpful English diction tools for the command line'
+
 # ============ STARTUP ============ #
 self="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 version=1
@@ -24,23 +28,19 @@ fi
 
 # ============ AVAILABLE CLI FUNCTIONS ============ #
 function define {
-	if [[ "$1" == "-h" || "$1" == "--help" ]] ; then
-		__helptext ">> thoth define WORD\nDefine the word WORD."
-		return
-	fi
+	__addarg "-h" "--help" "help" "optional" "" "Define a word"
+	__addarg "" "word" "positionalarray" "required" "" "The word(s) to define"
+	__parseargs "$@"
 
-	__verify_dict || return 1
+	__verify_dict
 
-	if [[ $# -eq 0 ]] ; then
-		__errortext "thoth: what word do you want to define?"
-		return 1
-	fi
+	local exit_code term letter output
 
 	exit_code=0
-	for term in "$@" ; do
+	for term in "${word[@]}" ; do
 		letter="${term:0:1}"
 		if [[ ! -d "${dict}/${letter}" ]] ; then
-			__errortext "thoth: no definition for '$term'"
+			__errortext "$koiname: no definition for '$term'"
 			exit_code=1
 			continue
 		fi
@@ -56,7 +56,7 @@ function define {
 			cat -s \
 		)"
 		if [[ "$output" == "" ]] ; then
-			__errortext "thoth: no definition for '$term'"
+			__errortext "$koiname: no definition for '$term'"
 			exit_code=1
 			continue
 		else
@@ -68,23 +68,19 @@ function define {
 }
 
 function lookup {
-	if [[ "$1" == "-h" || "$1" == "--help" ]] ; then
-		__helptext ">> thoth lookup WORD\nGet all information for word WORD."
-		return
-	fi
+	__addarg "-h" "--help" "help" "optional" "" "Get all information for a word"
+	__addarg "" "word" "positionalarray" "required" "" "The word(s) for which to get information"
+	__parseargs "$@"
 
-	__verify_dict || return 1
+	__verify_dict
 
-	if [[ $# -eq 0 ]] ; then
-		__errortext "thoth: what word do you want to lookup?"
-		return 1
-	fi
+	local exit_code term letter output
 
 	exit_code=0
-	for term in "$@" ; do
+	for term in "${word[@]}" ; do
 		letter="${term:0:1}"
 		if [[ ! -d "${dict}/${letter}" ]] ; then
-			__errortext "thoth: no lookup record for '$term'"
+			__errortext "$koiname: no lookup record for '$term'"
 			exit_code=1
 			continue
 		fi
@@ -94,7 +90,7 @@ function lookup {
 			cat -s \
 		)"
 		if [[ "$output" == "" ]] ; then
-			__errortext "thoth: no lookup record for '$term'"
+			__errortext "$koiname: no lookup record for '$term'"
 			exit_code=1
 			continue
 		else
@@ -110,30 +106,34 @@ function shell {
 		__errortext "thoth shell is already running"
 		return 1
 	fi
+	__addarg "-h" "--help" "help" "optional" "" "Open a new thoth shell to interpret thoth commands"
+	__addarg "-p" "--prompt" "storevalue" "optional" ">>" "The prompt prefix to use"
+	__parseargs "$@"
+
+	local key functions found func
 
 	thoth_shell=1
-	if [[ "$1" == "-h" || "$1" == "--help" ]] ; then
-		__helptext ">> thoth shell\nOpen a new thoth shell to interpret thoth commands."
-		return
-	fi
-
-	prompt=">> "
 	while : ; do
-		echo -n "$prompt"
-		IFS= read key
-		if [[ "$key" == "exit"* || "$key" == "quit"* ]] ; then return ; fi
-		functions=( `__listfunctions` )
-		found=0
-		for func in "${functions[@]}" ; do
-			if [[ "$func" == "`echo "$key" | cut -d ' ' -f 1`" ]] ; then
-				found=1
+		(
+			__cleararglists
+			echo -n "$prompt "
+			IFS= read key
+			if [[ "$key" == "exit"* || "$key" == "quit"* ]] ; then exit 15 ; fi
+			functions=( `__listfunctions` )
+			found=0
+			for func in "${functions[@]}" ; do
+				if [[ "$func" == "`echo "$key" | cut -d ' ' -f 1`" ]] ; then
+					found=1
+				fi
+			done
+			if [[ $found -eq 0 ]] ; then
+				__errortext "Unknown command '`echo $key | cut -d ' ' -f 1`'"
+				continue
 			fi
-		done
-		if [[ $found -eq 0 ]] ; then
-			__errortext "Unknown command '`echo $key | cut -d ' ' -f 1`'"
-			continue
-		fi
-		$key
+			set +e
+			( $key )
+			set -e
+		)
 	done
 }
 
@@ -356,14 +356,6 @@ function example {
 	return $exit_code
 }
 
-function list {
-	if [[ "$1" == "-h" || "$1" == "--help" ]] ; then
-		__helptext ">> thoth list\nList all available commands."
-		return
-	fi
-	__listfunctions
-}
-
 function version {
 	if [[ "$1" == "-h" || "$1" == "--help" ]] ; then
 		__helptext ">> thoth version\nPrint thoth version."
@@ -508,45 +500,7 @@ dictionary:  ${dict}
 EndOfInfo
 }
 
-function help {
-	if [[ "$1" == "-h" || "$1" == "--help" ]] ; then
-		__helptext ">> thoth help\nShow this menu and exit."
-		return
-	fi
-	cat << EndOfHelp
-$description
-
-Usage:
-  thoth COMMAND
-
-Available commands:
-$(__listfunctions | sed "s/^/  /")
-
-$( \
-	for cmd in `__listfunctions` ; do \
-		echo "$(${self}/thoth $cmd --help)" && \
-		echo ; \
-	done \
-)
-EndOfHelp
-}
-
 # ============ META FUNCTIONS ============ #
-function __listfunctions {
-	functionlist=( `declare -F | sed -e 's/declare -f //g' -e 's/[_-].*//g'` )
-	for func in "${functionlist[@]}" ; do
-		echo "$func"
-	done
-}
-
-function __helptext {
-	echo -e "$@" | fold -w 100 -s
-}
-
-function __errortext {
-	>&2 echo "$@"
-}
-
 function __verify_dict {
 	if [[ "$dict" == "" ]] ; then
 		__errortext "thoth: err: could not find a dictionary directory"
@@ -555,14 +509,6 @@ function __verify_dict {
 		__errortext "  location."
 		return 1
 	fi
-}
-
-function --help {
-	help "$@"
-}
-
-function -h {
-	help "$@"
 }
 
 function --version {
@@ -574,10 +520,12 @@ function -v {
 }
 
 # ============ RUN LOGIC ============ #
-if declare -F -- "${1:-}" >/dev/null ; then
-	"$@"
-else
-	__errortext "thoth: err: no such command '$1'"
-	__errortext "Use 'help' for available commands"
-	exit 1
-fi
+# if declare -F -- "${1:-}" >/dev/null ; then
+# 	"$@"
+# else
+# 	__errortext "thoth: err: no such command '$1'"
+# 	__errortext "Use 'help' for available commands"
+# 	exit 1
+# fi
+
+__koirun "$@"
